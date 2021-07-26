@@ -26,7 +26,7 @@ namespace EYM
 
         private void addBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.AddStudent window = new Forms.AddStudent();
+            Forms.students window = new Forms.students();
             window.MdiParent = this;
             window.Show();
    

@@ -35,8 +35,6 @@ namespace EYM
             this.reportBtn = new DevExpress.XtraBars.BarButtonItem();
             this.addBtn = new DevExpress.XtraBars.BarButtonItem();
             this.listBtn = new DevExpress.XtraBars.BarButtonItem();
-            this.deleteBtn = new DevExpress.XtraBars.BarButtonItem();
-            this.updateBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -68,8 +66,6 @@ namespace EYM
             this.ribbonControl1.SearchEditItem,
             this.addBtn,
             this.listBtn,
-            this.deleteBtn,
-            this.updateBtn,
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
@@ -101,12 +97,13 @@ namespace EYM
             // addBtn
             // 
             this.addBtn.ActAsDropDown = true;
-            this.addBtn.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.addBtn.Caption = "ÖĞRENCİ EKLE";
+            this.addBtn.Caption = "ÖĞRENCİ İŞLEMLERİ";
             this.addBtn.Id = 1;
             this.addBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addBtn.ImageOptions.Image")));
             this.addBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("addBtn.ImageOptions.LargeImage")));
             this.addBtn.Name = "addBtn";
+            this.addBtn.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.addBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.addBtn_ItemClick);
             // 
             // listBtn
@@ -116,22 +113,6 @@ namespace EYM
             this.listBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("listBtn.ImageOptions.Image")));
             this.listBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("listBtn.ImageOptions.LargeImage")));
             this.listBtn.Name = "listBtn";
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.Caption = "ÖĞRENCİ SİL";
-            this.deleteBtn.Id = 2;
-            this.deleteBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("deleteBtn.ImageOptions.Image")));
-            this.deleteBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("deleteBtn.ImageOptions.LargeImage")));
-            this.deleteBtn.Name = "deleteBtn";
-            // 
-            // updateBtn
-            // 
-            this.updateBtn.Caption = "ÖĞRENCİ BİLGİLERİNİ GÜNCELLE";
-            this.updateBtn.Id = 3;
-            this.updateBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("updateBtn.ImageOptions.Image")));
-            this.updateBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("updateBtn.ImageOptions.LargeImage")));
-            this.updateBtn.Name = "updateBtn";
             // 
             // barButtonItem1
             // 
@@ -206,8 +187,6 @@ namespace EYM
             this.ribbonPageGroup2.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup2.ImageOptions.Image")));
             this.ribbonPageGroup2.ItemLinks.Add(this.addBtn);
-            this.ribbonPageGroup2.ItemLinks.Add(this.deleteBtn);
-            this.ribbonPageGroup2.ItemLinks.Add(this.updateBtn);
             this.ribbonPageGroup2.ItemLinks.Add(this.listBtn);
             this.ribbonPageGroup2.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.TwoRows;
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
@@ -288,8 +267,6 @@ namespace EYM
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem addBtn;
         private DevExpress.XtraBars.BarButtonItem listBtn;
-        private DevExpress.XtraBars.BarButtonItem deleteBtn;
-        private DevExpress.XtraBars.BarButtonItem updateBtn;
         private DevExpress.XtraBars.BarButtonItem reportBtn;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;

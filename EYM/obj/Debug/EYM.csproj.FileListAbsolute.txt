@@ -156,4 +156,4 @@ C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\de\DevExpress.Office.v20.1.Core.re
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
-C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.AddStudent.resources
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.students.resources
