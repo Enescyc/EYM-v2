@@ -111,5 +111,27 @@ namespace EYM.Forms
         {
 
         }
+
+        private void searchControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchControl3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void students_Load(object sender, EventArgs e)
+        {
+            // TODO: Bu kod satırı 'eYMDataSet.Students' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.studentsTableAdapter.Fill(this.eYMDataSet.Students);
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
