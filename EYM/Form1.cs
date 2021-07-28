@@ -18,10 +18,7 @@ namespace EYM
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           if (this.MdiParent == null)
-            {
-                Console.WriteLine("Mdi Parent Null");
-            }
+
         }
 
         private void addBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -79,7 +76,9 @@ namespace EYM
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Forms.Employee newWindow = new Forms.Employee();
+            newWindow.MdiParent = this;
+            newWindow.Show();
         }
     }
 }

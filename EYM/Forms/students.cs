@@ -124,8 +124,9 @@ namespace EYM.Forms
 
         private void students_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'eYMDataSet.Students' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.studentsTableAdapter.Fill(this.eYMDataSet.Students);
+     
+           
+
 
         }
 
