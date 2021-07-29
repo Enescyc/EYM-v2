@@ -242,3 +242,8 @@ C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\es\DevExpress.XtraNavBar.v20.1.res
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ja\DevExpress.XtraNavBar.v20.1.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ru\DevExpress.XtraNavBar.v20.1.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Employee.resources
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EntityFramework.dll
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EntityFramework.xml
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.RollCall.resources

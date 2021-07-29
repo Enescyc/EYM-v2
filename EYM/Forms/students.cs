@@ -134,5 +134,15 @@ namespace EYM.Forms
         {
 
         }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gridControl1_DataSourceChanged(object sender, EventArgs e)
+        {
+            gridControl1.Refresh();
+        }
     }
 }
