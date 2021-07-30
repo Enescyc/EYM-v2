@@ -5,16 +5,15 @@
       <PropertyRef Name="EmployeeID" />
     </Key>
     <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nchar" MaxLength="30" />
-    <Property Name="Surname" Type="nchar" MaxLength="30" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="30" />
     <Property Name="BirthDay" Type="datetime" />
-    <Property Name="IdentificationNumber" Type="nvarchar" MaxLength="11" />
-    <Property Name="BloodClass" Type="nchar" MaxLength="10" />
-    <Property Name="TelephoneNumber" Type="nchar" MaxLength="11" />
-    <Property Name="Adress" Type="nchar" MaxLength="100" />
-    <Property Name="Gender" Type="nvarchar" MaxLength="5" />
+    <Property Name="IdentificationNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="BloodClass" Type="nvarchar" MaxLength="20" />
+    <Property Name="TelephoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="100" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="20" />
     <Property Name="Status" Type="nvarchar" MaxLength="20" />
-    <Property Name="authority" Type="smallint" />
   </EntityType>
   <EntityType Name="LessonAndStudent">
     <Key>
@@ -52,18 +51,18 @@
       <PropertyRef Name="StudentID" />
     </Key>
     <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nchar" MaxLength="30" />
-    <Property Name="Surname" Type="nchar" MaxLength="30" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="30" />
     <Property Name="BirthDay" Type="datetime" />
-    <Property Name="IdentificationNumber" Type="nvarchar" MaxLength="11" />
-    <Property Name="BloodClass" Type="nchar" MaxLength="10" />
-    <Property Name="TelephoneNumber" Type="nchar" MaxLength="11" />
-    <Property Name="Adress" Type="nchar" MaxLength="100" />
+    <Property Name="IdentificationNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="BloodClass" Type="nvarchar" MaxLength="15" />
+    <Property Name="TelephoneNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="100" />
     <Property Name="DisabledRatio" Type="smallint" />
     <Property Name="DisabledInfo" Type="nvarchar" MaxLength="50" />
-    <Property Name="StudentInfo" Type="nchar" MaxLength="100" />
-    <Property Name="SpecialEducation" Type="smallint" />
-    <Property Name="Gender" Type="nvarchar" MaxLength="5" />
+    <Property Name="StudentInfo" Type="nvarchar" MaxLength="100" />
+    <Property Name="SpecialEducation" Type="nvarchar" MaxLength="15" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -74,6 +73,16 @@
     <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Authority" Type="bit" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_LessonAndStudent_Lessons">
     <End Role="Lessons" Type="Self.Lessons" Multiplicity="1">
@@ -86,20 +95,6 @@
       </Principal>
       <Dependent Role="LessonAndStudent">
         <PropertyRef Name="LessonID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_LessonAndStudent_Students">
-    <End Role="Students" Type="Self.Students" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="LessonAndStudent" Type="Self.LessonAndStudent" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Students">
-        <PropertyRef Name="StudentID" />
-      </Principal>
-      <Dependent Role="LessonAndStudent">
-        <PropertyRef Name="StudentID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -117,17 +112,17 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_RollCall_Students">
-    <End Role="Students" Type="Self.Students" Multiplicity="1">
+  <Association Name="FK_UserLogin_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="RollCall" Type="Self.RollCall" Multiplicity="*" />
+    <End Role="UserLogin" Type="Self.UserLogin" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Students">
-        <PropertyRef Name="StudentID" />
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
       </Principal>
-      <Dependent Role="RollCall">
-        <PropertyRef Name="StudentID" />
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="EmployeeID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -170,21 +165,18 @@
     <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_LessonAndStudent_Lessons" Association="Self.FK_LessonAndStudent_Lessons">
       <End Role="Lessons" EntitySet="Lessons" />
-      <End Role="LessonAndStudent" EntitySet="LessonAndStudent" />
-    </AssociationSet>
-    <AssociationSet Name="FK_LessonAndStudent_Students" Association="Self.FK_LessonAndStudent_Students">
-      <End Role="Students" EntitySet="Students" />
       <End Role="LessonAndStudent" EntitySet="LessonAndStudent" />
     </AssociationSet>
     <AssociationSet Name="FK_RollCall_Lessons" Association="Self.FK_RollCall_Lessons">
       <End Role="Lessons" EntitySet="Lessons" />
       <End Role="RollCall" EntitySet="RollCall" />
     </AssociationSet>
-    <AssociationSet Name="FK_RollCall_Students" Association="Self.FK_RollCall_Students">
-      <End Role="Students" EntitySet="Students" />
-      <End Role="RollCall" EntitySet="RollCall" />
+    <AssociationSet Name="FK_UserLogin_Employee" Association="Self.FK_UserLogin_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="UserLogin" EntitySet="UserLogin" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -13,7 +13,7 @@ namespace EYM.Forms
 {
     public partial class students : DevExpress.XtraEditors.XtraForm
     {
-        EYMEntities1 db =new EYMEntities1();
+        EYMEntities2 db =new EYMEntities2();
 
         int StudentID;            
         public students()
@@ -38,6 +38,12 @@ namespace EYM.Forms
 
                       gridControl1.DataSource = db.Students.ToList();
                       lessonGrid.DataSource = lessons.ToList();
+            var listlesson = db.Lessons.ToList().ToArray();
+
+            for (int i = 0; i < listlesson.Length; i++)
+            {
+                comboLessons.Properties.Items.Add(listlesson[i].LessonName);
+            }
         }
 
         private void gridControl1_DataSourceChanged(object sender, EventArgs e)
@@ -50,6 +56,9 @@ namespace EYM.Forms
             try
             {
               LoadData();
+                gridView1.Columns["LessonAndStudent"].Visible = false;
+            
+
             }
             catch (Exception err)
             {
@@ -103,9 +112,9 @@ namespace EYM.Forms
                 st.Adress = Adress.Text.ToUpper().ToString();
                 st.BloodClass = BloodClass.Text.ToUpper().ToString();
                 st.Gender = Gender.Text.ToUpper().ToString();
-                st.SpecialEducation = 0;
+                st.SpecialEducation = SpecialEducation.Text.ToString();
                 st.DisabledInfo = DisabledInfo.Text.ToUpper().ToString();
-                st.DisabledRatio = 0;
+                st.DisabledRatio = 0; //TO DO
                 st.IdentificationNumber = IdentificationNumber.Text.ToUpper().ToString();
                 st.StudentInfo = StudentInfo.Text.ToUpper().ToString();
                 st.BirthDay = System.DateTime.Parse(Birthday.Text.ToString());
@@ -124,6 +133,65 @@ namespace EYM.Forms
             }
 
 
+
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var deleteStudent = db.Students.Find(StudentID);
+                if (deleteStudent != null)
+                {
+                    db.Students.Remove(deleteStudent);
+                    db.SaveChanges();
+                    XtraMessageBox.Show("Kayıt silindi.Silinen öğrenci:" + deleteStudent.Name+deleteStudent.Surname, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Lütfen Bir Öğrenci Seçin", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+               
+               
+            }
+            catch (Exception err)
+            {
+
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+      
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {            
+            
+            var updateStudent = db.Students.Find(StudentID);
+            updateStudent.Name = txtName.Text.ToUpper().ToString();
+            updateStudent.Surname = txtSurname.Text.ToUpper().ToString();
+            updateStudent.TelephoneNumber = TelephoneNumber.Text.ToUpper().ToString();
+            updateStudent.Adress = Adress.Text.ToUpper().ToString();
+            updateStudent.BloodClass = BloodClass.Text.ToUpper().ToString();
+            updateStudent.Gender = Gender.Text.ToUpper().ToString();
+            updateStudent.SpecialEducation = SpecialEducation.Text.ToString();
+            updateStudent.DisabledInfo = DisabledInfo.Text.ToUpper().ToString();
+            updateStudent.DisabledRatio = 0; //TO DO
+            updateStudent.IdentificationNumber = IdentificationNumber.Text.ToUpper().ToString();
+            updateStudent.StudentInfo = StudentInfo.Text.ToUpper().ToString();
+            updateStudent.BirthDay = System.DateTime.Parse(Birthday.Text.ToString());
+            db.SaveChanges();
+            XtraMessageBox.Show("Kayıt Güncellendi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+
+            }
+            catch (Exception err)
+            {
+
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
 
         }

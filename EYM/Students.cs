@@ -32,7 +32,7 @@ namespace EYM
         public Nullable<short> DisabledRatio { get; set; }
         public string DisabledInfo { get; set; }
         public string StudentInfo { get; set; }
-        public Nullable<short> SpecialEducation { get; set; }
+        public string SpecialEducation { get; set; }
         public string Gender { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

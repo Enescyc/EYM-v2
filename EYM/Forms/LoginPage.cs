@@ -33,10 +33,10 @@ namespace EYM.Forms
         }
         public string getPassword()
         {
-            return this.textEdit1.Text.ToString();
+            return this.Password.Text.ToString();
         }
         public string getUserName()
         {
-            return this.textEdit2.Text;        }
+            return this.userName.Text;        }
     }
 }

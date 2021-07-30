@@ -15,10 +15,10 @@ namespace EYM
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class EYMEntities : DbContext
+    public partial class EYMEntities2 : DbContext
     {
-        public EYMEntities()
-            : base("name=EYMEntities")
+        public EYMEntities2()
+            : base("name=EYMEntities2")
         {
         }
     
@@ -34,6 +34,7 @@ namespace EYM
         public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<Students> Students { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<UserLogin> UserLogin { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

@@ -36,12 +36,16 @@ namespace EYM.Forms
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.lessonGrid = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.StudentsName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBoxEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboLessons = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.InfoTable = new DevExpress.Utils.Layout.TablePanel();
@@ -69,13 +73,9 @@ namespace EYM.Forms
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.BloodClass = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtSurname = new DevExpress.XtraEditors.TextEdit();
             this.IdentificationNumber = new DevExpress.XtraEditors.TextEdit();
             this.Birthday = new DevExpress.XtraEditors.DateEdit();
-            this.txtSurname = new DevExpress.XtraEditors.TextEdit();
-            this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.lessonGrid = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -85,10 +85,14 @@ namespace EYM.Forms
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
+            this.tablePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lessonGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboLessons.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -103,14 +107,10 @@ namespace EYM.Forms
             ((System.ComponentModel.ISupportInitialize)(this.Adress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BloodClass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdentificationNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Birthday.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Birthday.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSurname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
-            this.tablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lessonGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -177,6 +177,49 @@ namespace EYM.Forms
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "DERS İŞLEMLERİ";
             // 
+            // tablePanel1
+            // 
+            this.tablePanel1.AutoSize = true;
+            this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 55F)});
+            this.tablePanel1.Controls.Add(this.simpleButton1);
+            this.tablePanel1.Controls.Add(this.lessonGrid);
+            this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tablePanel1.Location = new System.Drawing.Point(12, 156);
+            this.tablePanel1.Name = "tablePanel1";
+            this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 250F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F)});
+            this.tablePanel1.Size = new System.Drawing.Size(312, 290);
+            this.tablePanel1.TabIndex = 2;
+            // 
+            // simpleButton1
+            // 
+            this.tablePanel1.SetColumn(this.simpleButton1, 0);
+            this.simpleButton1.Location = new System.Drawing.Point(3, 255);
+            this.simpleButton1.Name = "simpleButton1";
+            this.tablePanel1.SetRow(this.simpleButton1, 1);
+            this.simpleButton1.Size = new System.Drawing.Size(306, 29);
+            this.simpleButton1.TabIndex = 37;
+            this.simpleButton1.Text = "DERSİ SİL";
+            // 
+            // lessonGrid
+            // 
+            this.tablePanel1.SetColumn(this.lessonGrid, 0);
+            this.lessonGrid.Location = new System.Drawing.Point(3, 3);
+            this.lessonGrid.MainView = this.gridView2;
+            this.lessonGrid.Name = "lessonGrid";
+            this.tablePanel1.SetRow(this.lessonGrid, 0);
+            this.lessonGrid.Size = new System.Drawing.Size(306, 244);
+            this.lessonGrid.TabIndex = 39;
+            this.lessonGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.lessonGrid;
+            this.gridView2.Name = "gridView2";
+            // 
             // tablePanel2
             // 
             this.tablePanel2.AutoScroll = true;
@@ -186,9 +229,9 @@ namespace EYM.Forms
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 61.38F)});
             this.tablePanel2.Controls.Add(this.simpleButton4);
             this.tablePanel2.Controls.Add(this.labelControl14);
-            this.tablePanel2.Controls.Add(this.textEdit8);
+            this.tablePanel2.Controls.Add(this.StudentsName);
             this.tablePanel2.Controls.Add(this.labelControl13);
-            this.tablePanel2.Controls.Add(this.comboBoxEdit3);
+            this.tablePanel2.Controls.Add(this.comboLessons);
             this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tablePanel2.Location = new System.Drawing.Point(12, 36);
             this.tablePanel2.Name = "tablePanel2";
@@ -220,17 +263,17 @@ namespace EYM.Forms
             this.labelControl14.TabIndex = 35;
             this.labelControl14.Text = "DERS SEÇİMİ:";
             // 
-            // textEdit8
+            // StudentsName
             // 
-            this.tablePanel2.SetColumn(this.textEdit8, 1);
-            this.textEdit8.Location = new System.Drawing.Point(143, 8);
-            this.textEdit8.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit8.Properties.Appearance.Options.UseFont = true;
-            this.tablePanel2.SetRow(this.textEdit8, 0);
-            this.textEdit8.Size = new System.Drawing.Size(164, 24);
-            this.textEdit8.TabIndex = 3;
+            this.tablePanel2.SetColumn(this.StudentsName, 1);
+            this.StudentsName.Location = new System.Drawing.Point(143, 8);
+            this.StudentsName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.StudentsName.Name = "StudentsName";
+            this.StudentsName.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.StudentsName.Properties.Appearance.Options.UseFont = true;
+            this.tablePanel2.SetRow(this.StudentsName, 0);
+            this.StudentsName.Size = new System.Drawing.Size(164, 24);
+            this.StudentsName.TabIndex = 3;
             // 
             // labelControl13
             // 
@@ -243,23 +286,20 @@ namespace EYM.Forms
             this.labelControl13.TabIndex = 33;
             this.labelControl13.Text = "ÖĞRENCİNİN ADI:";
             // 
-            // comboBoxEdit3
+            // comboLessons
             // 
-            this.tablePanel2.SetColumn(this.comboBoxEdit3, 1);
-            this.comboBoxEdit3.Location = new System.Drawing.Point(143, 48);
-            this.comboBoxEdit3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.comboBoxEdit3.Name = "comboBoxEdit3";
-            this.comboBoxEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxEdit3.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.tablePanel2.SetColumn(this.comboLessons, 1);
+            this.comboLessons.Location = new System.Drawing.Point(143, 48);
+            this.comboLessons.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.comboLessons.Name = "comboLessons";
+            this.comboLessons.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboLessons.Properties.Appearance.Options.UseFont = true;
+            this.comboLessons.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit3.Properties.Items.AddRange(new object[] {
-            "FAYDALANIYOR",
-            "FAYDALANMIYOR"});
-            this.comboBoxEdit3.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.tablePanel2.SetRow(this.comboBoxEdit3, 1);
-            this.comboBoxEdit3.Size = new System.Drawing.Size(164, 24);
-            this.comboBoxEdit3.TabIndex = 34;
+            this.comboLessons.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.tablePanel2.SetRow(this.comboLessons, 1);
+            this.comboLessons.Size = new System.Drawing.Size(164, 24);
+            this.comboLessons.TabIndex = 34;
             // 
             // panel2
             // 
@@ -399,6 +439,7 @@ namespace EYM.Forms
             this.UpdateBtn.Size = new System.Drawing.Size(292, 39);
             this.UpdateBtn.TabIndex = 15;
             this.UpdateBtn.Text = "GÜNCELLE";
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // DeleteBtn
             // 
@@ -426,6 +467,7 @@ namespace EYM.Forms
             this.DeleteBtn.Size = new System.Drawing.Size(292, 39);
             this.DeleteBtn.TabIndex = 28;
             this.DeleteBtn.Text = "SİL";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // Gender
             // 
@@ -449,44 +491,44 @@ namespace EYM.Forms
             // labelControl12
             // 
             this.InfoTable.SetColumn(this.labelControl12, 0);
-            this.labelControl12.Location = new System.Drawing.Point(13, 284);
+            this.labelControl12.Location = new System.Drawing.Point(13, 285);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl12, 9);
-            this.labelControl12.Size = new System.Drawing.Size(84, 23);
+            this.labelControl12.Size = new System.Drawing.Size(84, 22);
             this.labelControl12.TabIndex = 27;
             this.labelControl12.Text = "CİNSİYET:";
             // 
             // labelControl1
             // 
             this.InfoTable.SetColumn(this.labelControl1, 0);
-            this.labelControl1.Location = new System.Drawing.Point(13, 14);
+            this.labelControl1.Location = new System.Drawing.Point(13, 15);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl1, 0);
-            this.labelControl1.Size = new System.Drawing.Size(42, 23);
+            this.labelControl1.Size = new System.Drawing.Size(42, 22);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ADI:";
             // 
             // labelControl2
             // 
             this.InfoTable.SetColumn(this.labelControl2, 0);
-            this.labelControl2.Location = new System.Drawing.Point(13, 44);
+            this.labelControl2.Location = new System.Drawing.Point(13, 45);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl2, 1);
-            this.labelControl2.Size = new System.Drawing.Size(71, 23);
+            this.labelControl2.Size = new System.Drawing.Size(71, 22);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "SOYADI:";
             // 
             // labelControl3
             // 
             this.InfoTable.SetColumn(this.labelControl3, 0);
-            this.labelControl3.Location = new System.Drawing.Point(13, 74);
+            this.labelControl3.Location = new System.Drawing.Point(13, 75);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl3, 2);
-            this.labelControl3.Size = new System.Drawing.Size(144, 23);
+            this.labelControl3.Size = new System.Drawing.Size(144, 22);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "KİMLİK NUMARASI:";
             // 
@@ -533,33 +575,33 @@ namespace EYM.Forms
             // labelControl4
             // 
             this.InfoTable.SetColumn(this.labelControl4, 0);
-            this.labelControl4.Location = new System.Drawing.Point(13, 104);
+            this.labelControl4.Location = new System.Drawing.Point(13, 105);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl4, 3);
-            this.labelControl4.Size = new System.Drawing.Size(125, 23);
+            this.labelControl4.Size = new System.Drawing.Size(125, 22);
             this.labelControl4.TabIndex = 3;
             this.labelControl4.Text = "DOĞUM TARİHİ:";
             // 
             // labelControl9
             // 
             this.InfoTable.SetColumn(this.labelControl9, 0);
-            this.labelControl9.Location = new System.Drawing.Point(13, 254);
+            this.labelControl9.Location = new System.Drawing.Point(13, 255);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl9, 8);
-            this.labelControl9.Size = new System.Drawing.Size(117, 23);
+            this.labelControl9.Size = new System.Drawing.Size(117, 22);
             this.labelControl9.TabIndex = 21;
             this.labelControl9.Text = "ENGEL BİLGİSİ:";
             // 
             // labelControl5
             // 
             this.InfoTable.SetColumn(this.labelControl5, 0);
-            this.labelControl5.Location = new System.Drawing.Point(13, 134);
+            this.labelControl5.Location = new System.Drawing.Point(13, 135);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl5, 4);
-            this.labelControl5.Size = new System.Drawing.Size(98, 23);
+            this.labelControl5.Size = new System.Drawing.Size(98, 22);
             this.labelControl5.TabIndex = 4;
             this.labelControl5.Text = "KAN GRUBU:";
             // 
@@ -591,11 +633,11 @@ namespace EYM.Forms
             // labelControl8
             // 
             this.InfoTable.SetColumn(this.labelControl8, 0);
-            this.labelControl8.Location = new System.Drawing.Point(13, 224);
+            this.labelControl8.Location = new System.Drawing.Point(13, 225);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl8, 7);
-            this.labelControl8.Size = new System.Drawing.Size(110, 23);
+            this.labelControl8.Size = new System.Drawing.Size(110, 22);
             this.labelControl8.TabIndex = 20;
             this.labelControl8.Text = "ENGEL ORANI:";
             // 
@@ -643,11 +685,11 @@ namespace EYM.Forms
             // labelControl11
             // 
             this.InfoTable.SetColumn(this.labelControl11, 0);
-            this.labelControl11.Location = new System.Drawing.Point(13, 194);
+            this.labelControl11.Location = new System.Drawing.Point(13, 195);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl11, 6);
-            this.labelControl11.Size = new System.Drawing.Size(174, 23);
+            this.labelControl11.Size = new System.Drawing.Size(174, 22);
             this.labelControl11.TabIndex = 18;
             this.labelControl11.Text = "ÖZEL EĞİTİM DURUMU:";
             // 
@@ -710,6 +752,18 @@ namespace EYM.Forms
             this.txtName.Size = new System.Drawing.Size(288, 24);
             this.txtName.TabIndex = 1;
             // 
+            // txtSurname
+            // 
+            this.InfoTable.SetColumn(this.txtSurname, 1);
+            this.txtSurname.Location = new System.Drawing.Point(200, 46);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSurname.Properties.Appearance.Options.UseFont = true;
+            this.InfoTable.SetRow(this.txtSurname, 1);
+            this.txtSurname.Size = new System.Drawing.Size(288, 24);
+            this.txtSurname.TabIndex = 2;
+            // 
             // IdentificationNumber
             // 
             this.InfoTable.SetColumn(this.IdentificationNumber, 1);
@@ -739,61 +793,6 @@ namespace EYM.Forms
             this.Birthday.Size = new System.Drawing.Size(288, 24);
             this.Birthday.TabIndex = 4;
             // 
-            // txtSurname
-            // 
-            this.InfoTable.SetColumn(this.txtSurname, 1);
-            this.txtSurname.Location = new System.Drawing.Point(200, 46);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSurname.Properties.Appearance.Options.UseFont = true;
-            this.InfoTable.SetRow(this.txtSurname, 1);
-            this.txtSurname.Size = new System.Drawing.Size(288, 24);
-            this.txtSurname.TabIndex = 2;
-            // 
-            // tablePanel1
-            // 
-            this.tablePanel1.AutoSize = true;
-            this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 55F)});
-            this.tablePanel1.Controls.Add(this.simpleButton1);
-            this.tablePanel1.Controls.Add(this.lessonGrid);
-            this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tablePanel1.Location = new System.Drawing.Point(12, 156);
-            this.tablePanel1.Name = "tablePanel1";
-            this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 250F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F)});
-            this.tablePanel1.Size = new System.Drawing.Size(312, 290);
-            this.tablePanel1.TabIndex = 2;
-            // 
-            // lessonGrid
-            // 
-            this.tablePanel1.SetColumn(this.lessonGrid, 0);
-            this.lessonGrid.Location = new System.Drawing.Point(3, 3);
-            this.lessonGrid.MainView = this.gridView2;
-            this.lessonGrid.Name = "lessonGrid";
-            this.tablePanel1.SetRow(this.lessonGrid, 0);
-            this.lessonGrid.Size = new System.Drawing.Size(306, 244);
-            this.lessonGrid.TabIndex = 39;
-            this.lessonGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.lessonGrid;
-            this.gridView2.Name = "gridView2";
-            // 
-            // simpleButton1
-            // 
-            this.tablePanel1.SetColumn(this.simpleButton1, 0);
-            this.simpleButton1.Location = new System.Drawing.Point(3, 255);
-            this.simpleButton1.Name = "simpleButton1";
-            this.tablePanel1.SetRow(this.simpleButton1, 1);
-            this.simpleButton1.Size = new System.Drawing.Size(306, 29);
-            this.simpleButton1.TabIndex = 37;
-            this.simpleButton1.Text = "DERSİ KAYDET";
-            // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -816,11 +815,15 @@ namespace EYM.Forms
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
+            this.tablePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lessonGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             this.tablePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboLessons.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -837,14 +840,10 @@ namespace EYM.Forms
             ((System.ComponentModel.ISupportInitialize)(this.Adress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BloodClass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSurname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdentificationNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Birthday.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Birthday.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSurname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
-            this.tablePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lessonGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -884,10 +883,10 @@ namespace EYM.Forms
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.Utils.Layout.TablePanel tablePanel2;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit3;
+        private DevExpress.XtraEditors.ComboBoxEdit comboLessons;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.TextEdit StudentsName;
         private DevExpress.XtraEditors.TextEdit TelephoneNumber;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;

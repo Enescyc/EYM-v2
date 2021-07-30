@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="EYMModelStoreContainer" CdmEntityContainer="EYMEntities">
+  <EntityContainerMapping StorageEntityContainer="EYMModelStoreContainer" CdmEntityContainer="EYMEntities2">
     <EntitySetMapping Name="Employee">
       <EntityTypeMapping TypeName="EYMModel.Employee">
         <MappingFragment StoreEntitySet="Employee">
@@ -14,7 +14,6 @@
           <ScalarProperty Name="Adress" ColumnName="Adress" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="authority" ColumnName="authority" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -80,6 +79,17 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogin">
+      <EntityTypeMapping TypeName="EYMModel.UserLogin">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

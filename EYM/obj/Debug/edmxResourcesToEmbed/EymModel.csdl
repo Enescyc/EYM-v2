@@ -5,16 +5,16 @@
       <PropertyRef Name="EmployeeID" />
     </Key>
     <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
-    <Property Name="Surname" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="BirthDay" Type="DateTime" Precision="3" />
-    <Property Name="IdentificationNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
-    <Property Name="BloodClass" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="TelephoneNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
-    <Property Name="Adress" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-    <Property Name="Gender" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="IdentificationNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BloodClass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TelephoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Adress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="authority" Type="Int16" />
+    <NavigationProperty Name="UserLogin" Relationship="Self.FK_UserLogin_Employee" FromRole="Employee" ToRole="UserLogin" />
   </EntityType>
   <EntityType Name="LessonAndStudent">
     <Key>
@@ -58,18 +58,18 @@
       <PropertyRef Name="StudentID" />
     </Key>
     <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
-    <Property Name="Surname" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="BirthDay" Type="DateTime" Precision="3" />
-    <Property Name="IdentificationNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
-    <Property Name="BloodClass" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="TelephoneNumber" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
-    <Property Name="Adress" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="IdentificationNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="BloodClass" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TelephoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Adress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DisabledRatio" Type="Int16" />
     <Property Name="DisabledInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="StudentInfo" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-    <Property Name="SpecialEducation" Type="Int16" />
-    <Property Name="Gender" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="StudentInfo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialEducation" Type="String" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="LessonAndStudent" Relationship="Self.FK_LessonAndStudent_Students" FromRole="Students" ToRole="LessonAndStudent" />
     <NavigationProperty Name="RollCall" Relationship="Self.FK_RollCall_Students" FromRole="Students" ToRole="RollCall" />
   </EntityType>
@@ -83,6 +83,31 @@
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Authority" Type="Boolean" Nullable="false" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_UserLogin_Employee" FromRole="UserLogin" ToRole="Employee" />
+  </EntityType>
+  <Association Name="FK_UserLogin_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserLogin" Type="Self.UserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="UserLogin">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_LessonAndStudent_Lessons">
     <End Role="Lessons" Type="Self.Lessons" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -139,7 +164,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="EYMEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="EYMEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Employee" EntityType="Self.Employee" />
     <EntitySet Name="LessonAndStudent" EntityType="Self.LessonAndStudent" />
     <EntitySet Name="Lessons" EntityType="Self.Lessons" />
@@ -147,6 +172,11 @@
     <EntitySet Name="Status" EntityType="Self.Status" />
     <EntitySet Name="Students" EntityType="Self.Students" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="UserLogin" EntityType="Self.UserLogin" />
+    <AssociationSet Name="FK_UserLogin_Employee" Association="Self.FK_UserLogin_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="UserLogin" EntitySet="UserLogin" />
+    </AssociationSet>
     <AssociationSet Name="FK_LessonAndStudent_Lessons" Association="Self.FK_LessonAndStudent_Lessons">
       <End Role="Lessons" EntitySet="Lessons" />
       <End Role="LessonAndStudent" EntitySet="LessonAndStudent" />

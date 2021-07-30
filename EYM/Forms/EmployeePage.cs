@@ -17,7 +17,7 @@ namespace EYM.Forms
 {
     public partial class EmployeePage : DevExpress.XtraEditors.XtraForm
     {
-        EYMEntities1 db = new EYMEntities1();
+        EYMEntities2 db = new EYMEntities2();
         int deleteID = -1;
 
         public EmployeePage()
@@ -52,16 +52,19 @@ namespace EYM.Forms
             gridView1.Columns["Adress"].Caption = "Adres Bilgisi";
             gridView1.Columns["Gender"].Caption = "Cinsiyeti";
             gridView1.Columns["Status"].Caption = "Görevi";
-            gridView1.Columns["authority"].Visible = false;
+            gridView1.Columns["UserLogin"].Visible = false;
+       
         }
 
         private void Employee_Load(object sender, EventArgs e)
         {
             try
             {
+               
                 gridControl1.DataSource = db.Employee.ToList();
-                loadStatus();
                 changeGridViewColumnNames();
+                loadStatus();
+             
 
 
 
@@ -86,14 +89,6 @@ namespace EYM.Forms
                 newEmployee.Adress = Adress.Text.ToUpper().ToString();
                 newEmployee.Gender = Gender.Text.ToUpper().ToString();
                 newEmployee.Status = txtStatus.Text.ToUpper().ToString();
-                if (txtStatus.Text.ToUpper().ToString() == "MÜDÜR")
-                {
-                    newEmployee.authority = 1;
-                }
-                else
-                {
-                    newEmployee.authority = 0;
-                }
                 db.Employee.Add(newEmployee);
                 db.SaveChanges();
                 gridControl1.DataSource = db.Employee.ToList();

@@ -9,15 +9,17 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout;
 
+
 namespace EYM
 {
     public partial class HomePage : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public string Username;
         public string Password;
+        public int WhoIam;
 
-        EYMEntities1 db = new EYMEntities1();
-        Forms.EmployeePage newWindow = new Forms.EmployeePage();
+        EYMEntities2 db = new EYMEntities2();
+       
         public HomePage()
         {
             InitializeComponent();
@@ -30,18 +32,38 @@ namespace EYM
             Password = login.getPassword();
             Username = login.getUserName();
 
-            if (Password == "123")
-            {
-                MessageBox.Show("hello");
+            var findUser = from ls in db.UserLogin
+                         where ls.Username == Username && ls.Password == Password
+                         select ls;
 
-            }
+             var result = findUser.FirstOrDefault();
+            if (result!=null)
+            {
+                WhoIam = result.EmployeeID;
+                var employee = db.Employee.Find(WhoIam);
+
+
+                signIn.Caption += employee.Name + " " + employee.Surname;
+                if (result.Authority == false)
+                    barButtonItem11.VisibleInSearchMenu = false;
+                {
+
+                }
+;            }
             else
             {
-                HomePage.ActiveForm.Close();
+                XtraMessageBox.Show("Kullanıcı Adı veya Şifre hatalı lütfen tekrar deneyin.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Restart();
             }
+
+            
+
             
         }
-
+        int getLoginUserID()
+        {
+            return WhoIam;
+        }
             private void addBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.students window = new Forms.students();
@@ -56,7 +78,7 @@ namespace EYM
 
 
 
-
+            Forms.EmployeePage newWindow = new Forms.EmployeePage();
             newWindow.MdiParent = this;
             newWindow.Show();
         
@@ -66,6 +88,18 @@ namespace EYM
          
             
     
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Authority aut = new Forms.Authority();
+            aut.MdiParent = this;
+            aut.Show();
         }
     }
 }
