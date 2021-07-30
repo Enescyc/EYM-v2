@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.Data.v20.1" />
     <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.ExpressApp.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Map.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -61,6 +62,7 @@
     <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1" />
     <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGauges.v20.1.Presets, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -89,6 +91,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -100,23 +103,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Employee.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EYM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EYM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EYM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EYM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EYM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EYM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EymModel.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="EymModel.Designer.cs">
+      <DependentUpon>EymModel.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Employee.cs">
+    <Compile Include="Forms\EmployeePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\RollCall.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\RollCall.Designer.cs">
-      <DependentUpon>RollCall.cs</DependentUpon>
+    <Compile Include="Forms\EmployeePage.Designer.cs">
+      <DependentUpon>EmployeePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\students.cs">
       <SubType>Form</SubType>
@@ -124,16 +149,37 @@
     <Compile Include="Forms\students.Designer.cs">
       <DependentUpon>students.cs</DependentUpon>
     </Compile>
+    <Compile Include="LessonAndStudent.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lessons.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RollCall.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Status.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Students.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>EymModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RollCall.resx">
-      <DependentUpon>RollCall.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EmployeePage.resx">
+      <DependentUpon>EmployeePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\students.resx">
       <DependentUpon>students.cs</DependentUpon>
@@ -149,7 +195,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="EymModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EymModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="App.config" />
+    <EntityDeploy Include="EYM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EYM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EYM.edmx.diagram">
+      <DependentUpon>EYM.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -166,6 +223,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editcontact_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engelsizyasam.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EYM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EYM.edmx</DependentUpon>
+      <LastGenOutput>EYM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EYM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EYM.edmx</DependentUpon>
+      <LastGenOutput>EYM.cs</LastGenOutput>
+    </Content>
+    <Content Include="EymModel.tt">
+      <DependentUpon>EymModel.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EymModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -47,7 +47,6 @@ namespace EYM.Forms
             this.ClientSize = new System.Drawing.Size(1154, 658);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
-            this.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Name = "RollCall";
             this.Text = "RollCall";
             this.ResumeLayout(false);

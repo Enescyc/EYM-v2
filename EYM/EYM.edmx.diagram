@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d940735e9b67426b838514cad24db695" Name="Diagram1">
+        <EntityTypeShape EntityType="EYMModel.Employee" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EYMModel.LessonAndStudent" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EYMModel.Lessons" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EYMModel.RollCall" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EYMModel.Status" Width="1.5" PointX="2.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EYMModel.Students" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EYMModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="EYMModel.FK_LessonAndStudent_Lessons" ManuallyRouted="false" />
+        <AssociationConnector Association="EYMModel.FK_LessonAndStudent_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="EYMModel.FK_RollCall_Lessons" ManuallyRouted="false" />
+        <AssociationConnector Association="EYMModel.FK_RollCall_Students" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

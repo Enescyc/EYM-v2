@@ -116,9 +116,9 @@ namespace EYM.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(11, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1622, 856);
+            this.panel1.Size = new System.Drawing.Size(1622, 867);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+        
             // 
             // panelControl1
             // 
@@ -126,7 +126,7 @@ namespace EYM.Forms
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(527, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(755, 856);
+            this.panelControl1.Size = new System.Drawing.Size(755, 867);
             this.panelControl1.TabIndex = 3;
             // 
             // gridControl1
@@ -135,7 +135,7 @@ namespace EYM.Forms
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(751, 852);
+            this.gridControl1.Size = new System.Drawing.Size(751, 863);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -152,7 +152,7 @@ namespace EYM.Forms
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl2.Location = new System.Drawing.Point(1282, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(340, 856);
+            this.panelControl2.Size = new System.Drawing.Size(340, 867);
             this.panelControl2.TabIndex = 2;
             // 
             // groupControl2
@@ -164,10 +164,10 @@ namespace EYM.Forms
             this.groupControl2.Margin = new System.Windows.Forms.Padding(10);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Padding = new System.Windows.Forms.Padding(10);
-            this.groupControl2.Size = new System.Drawing.Size(336, 852);
+            this.groupControl2.Size = new System.Drawing.Size(336, 863);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "DERS İŞLEMLERİ";
-            this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
+
             // 
             // tablePanel2
             // 
@@ -182,7 +182,7 @@ namespace EYM.Forms
             this.tablePanel2.Controls.Add(this.labelControl13);
             this.tablePanel2.Controls.Add(this.comboBoxEdit3);
             this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablePanel2.Location = new System.Drawing.Point(12, 40);
+            this.tablePanel2.Location = new System.Drawing.Point(12, 36);
             this.tablePanel2.Name = "tablePanel2";
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F),
@@ -191,7 +191,7 @@ namespace EYM.Forms
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F)});
-            this.tablePanel2.Size = new System.Drawing.Size(312, 800);
+            this.tablePanel2.Size = new System.Drawing.Size(312, 815);
             this.tablePanel2.TabIndex = 1;
             // 
             // simpleButton5
@@ -273,9 +273,9 @@ namespace EYM.Forms
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(527, 856);
+            this.panel2.Size = new System.Drawing.Size(527, 867);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+  
             // 
             // groupControl1
             // 
@@ -301,10 +301,10 @@ namespace EYM.Forms
             this.groupControl1.Margin = new System.Windows.Forms.Padding(10);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Padding = new System.Windows.Forms.Padding(10);
-            this.groupControl1.Size = new System.Drawing.Size(527, 856);
+            this.groupControl1.Size = new System.Drawing.Size(527, 867);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "KİŞİSEL BİLGİLER";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
+  
             // 
             // tablePanel1
             // 
@@ -342,7 +342,7 @@ namespace EYM.Forms
             this.tablePanel1.Controls.Add(this.textEdit3);
             this.tablePanel1.Controls.Add(this.dateEdit1);
             this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tablePanel1.Location = new System.Drawing.Point(12, 51);
+            this.tablePanel1.Location = new System.Drawing.Point(12, 47);
             this.tablePanel1.Margin = new System.Windows.Forms.Padding(10);
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Padding = new System.Windows.Forms.Padding(10);
@@ -456,49 +456,49 @@ namespace EYM.Forms
             // labelControl12
             // 
             this.tablePanel1.SetColumn(this.labelControl12, 0);
-            this.labelControl12.Location = new System.Drawing.Point(13, 285);
+            this.labelControl12.Location = new System.Drawing.Point(13, 295);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl12, 9);
-            this.labelControl12.Size = new System.Drawing.Size(84, 22);
+            this.labelControl12.Size = new System.Drawing.Size(84, 12);
             this.labelControl12.TabIndex = 27;
             this.labelControl12.Text = "CİNSİYET:";
             // 
             // labelControl1
             // 
             this.tablePanel1.SetColumn(this.labelControl1, 0);
-            this.labelControl1.Location = new System.Drawing.Point(13, 15);
+            this.labelControl1.Location = new System.Drawing.Point(13, 25);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl1, 0);
-            this.labelControl1.Size = new System.Drawing.Size(42, 22);
+            this.labelControl1.Size = new System.Drawing.Size(42, 12);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ADI:";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+    
             // 
             // labelControl2
             // 
             this.tablePanel1.SetColumn(this.labelControl2, 0);
-            this.labelControl2.Location = new System.Drawing.Point(13, 45);
+            this.labelControl2.Location = new System.Drawing.Point(13, 55);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl2, 1);
-            this.labelControl2.Size = new System.Drawing.Size(71, 22);
+            this.labelControl2.Size = new System.Drawing.Size(71, 12);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "SOYADI:";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
+ 
             // 
             // labelControl3
             // 
             this.tablePanel1.SetColumn(this.labelControl3, 0);
-            this.labelControl3.Location = new System.Drawing.Point(13, 75);
+            this.labelControl3.Location = new System.Drawing.Point(13, 85);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl3, 2);
-            this.labelControl3.Size = new System.Drawing.Size(144, 22);
+            this.labelControl3.Size = new System.Drawing.Size(144, 12);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "KİMLİK NUMARASI:";
-            this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
+
             // 
             // simpleButton1
             // 
@@ -526,7 +526,7 @@ namespace EYM.Forms
             this.simpleButton1.Size = new System.Drawing.Size(292, 39);
             this.simpleButton1.TabIndex = 14;
             this.simpleButton1.Text = "KAYDET";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+    
             // 
             // textEdit6
             // 
@@ -543,37 +543,37 @@ namespace EYM.Forms
             // labelControl4
             // 
             this.tablePanel1.SetColumn(this.labelControl4, 0);
-            this.labelControl4.Location = new System.Drawing.Point(13, 105);
+            this.labelControl4.Location = new System.Drawing.Point(13, 115);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl4, 3);
-            this.labelControl4.Size = new System.Drawing.Size(125, 22);
+            this.labelControl4.Size = new System.Drawing.Size(125, 12);
             this.labelControl4.TabIndex = 3;
             this.labelControl4.Text = "DOĞUM TARİHİ:";
-            this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);
+
             // 
             // labelControl9
             // 
             this.tablePanel1.SetColumn(this.labelControl9, 0);
-            this.labelControl9.Location = new System.Drawing.Point(13, 255);
+            this.labelControl9.Location = new System.Drawing.Point(13, 265);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl9, 8);
-            this.labelControl9.Size = new System.Drawing.Size(117, 22);
+            this.labelControl9.Size = new System.Drawing.Size(117, 12);
             this.labelControl9.TabIndex = 21;
             this.labelControl9.Text = "ENGEL BİLGİSİ:";
             // 
             // labelControl5
             // 
             this.tablePanel1.SetColumn(this.labelControl5, 0);
-            this.labelControl5.Location = new System.Drawing.Point(13, 135);
+            this.labelControl5.Location = new System.Drawing.Point(13, 145);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl5, 4);
-            this.labelControl5.Size = new System.Drawing.Size(98, 22);
+            this.labelControl5.Size = new System.Drawing.Size(98, 12);
             this.labelControl5.TabIndex = 4;
             this.labelControl5.Text = "KAN GRUBU:";
-            this.labelControl5.Click += new System.EventHandler(this.labelControl5_Click);
+
             // 
             // textEdit4
             // 
@@ -592,23 +592,23 @@ namespace EYM.Forms
             // labelControl7
             // 
             this.tablePanel1.SetColumn(this.labelControl7, 0);
-            this.labelControl7.Location = new System.Drawing.Point(13, 163);
+            this.labelControl7.Location = new System.Drawing.Point(13, 173);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl7, 5);
-            this.labelControl7.Size = new System.Drawing.Size(157, 24);
+            this.labelControl7.Size = new System.Drawing.Size(157, 14);
             this.labelControl7.TabIndex = 13;
             this.labelControl7.Text = "TELEFON NUMARASI:";
-            this.labelControl7.Click += new System.EventHandler(this.labelControl7_Click);
+ 
             // 
             // labelControl8
             // 
             this.tablePanel1.SetColumn(this.labelControl8, 0);
-            this.labelControl8.Location = new System.Drawing.Point(13, 225);
+            this.labelControl8.Location = new System.Drawing.Point(13, 235);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl8, 7);
-            this.labelControl8.Size = new System.Drawing.Size(110, 22);
+            this.labelControl8.Size = new System.Drawing.Size(110, 12);
             this.labelControl8.TabIndex = 20;
             this.labelControl8.Text = "ENGEL ORANI:";
             // 
@@ -656,11 +656,11 @@ namespace EYM.Forms
             // labelControl11
             // 
             this.tablePanel1.SetColumn(this.labelControl11, 0);
-            this.labelControl11.Location = new System.Drawing.Point(13, 195);
+            this.labelControl11.Location = new System.Drawing.Point(13, 205);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Padding = new System.Windows.Forms.Padding(6);
             this.tablePanel1.SetRow(this.labelControl11, 6);
-            this.labelControl11.Size = new System.Drawing.Size(174, 22);
+            this.labelControl11.Size = new System.Drawing.Size(174, 12);
             this.labelControl11.TabIndex = 18;
             this.labelControl11.Text = "ÖZEL EĞİTİM DURUMU:";
             // 
@@ -710,7 +710,7 @@ namespace EYM.Forms
             this.tablePanel1.SetRow(this.textEdit5, 4);
             this.textEdit5.Size = new System.Drawing.Size(288, 24);
             this.textEdit5.TabIndex = 5;
-            this.textEdit5.SelectedIndexChanged += new System.EventHandler(this.textEdit5_SelectedIndexChanged);
+          
             // 
             // textEdit1
             // 
@@ -723,7 +723,7 @@ namespace EYM.Forms
             this.tablePanel1.SetRow(this.textEdit1, 0);
             this.textEdit1.Size = new System.Drawing.Size(288, 24);
             this.textEdit1.TabIndex = 1;
-            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+         
             // 
             // textEdit2
             // 
@@ -736,7 +736,7 @@ namespace EYM.Forms
             this.tablePanel1.SetRow(this.textEdit2, 1);
             this.textEdit2.Size = new System.Drawing.Size(288, 24);
             this.textEdit2.TabIndex = 2;
-            this.textEdit2.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
+    
             // 
             // textEdit3
             // 
@@ -749,7 +749,7 @@ namespace EYM.Forms
             this.tablePanel1.SetRow(this.textEdit3, 2);
             this.textEdit3.Size = new System.Drawing.Size(288, 24);
             this.textEdit3.TabIndex = 3;
-            this.textEdit3.EditValueChanged += new System.EventHandler(this.textEdit3_EditValueChanged);
+   
             // 
             // dateEdit1
             // 
@@ -767,20 +767,20 @@ namespace EYM.Forms
             this.tablePanel1.SetRow(this.dateEdit1, 3);
             this.dateEdit1.Size = new System.Drawing.Size(288, 24);
             this.dateEdit1.TabIndex = 4;
-            this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
+
             // 
             // students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.ClientSize = new System.Drawing.Size(1644, 878);
+            this.ClientSize = new System.Drawing.Size(1644, 889);
             this.Controls.Add(this.panel1);
             this.Name = "students";
             this.Padding = new System.Windows.Forms.Padding(11);
             this.Text = "ÖĞRENCİ İŞLEMLERİ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.students_Load);
+    
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

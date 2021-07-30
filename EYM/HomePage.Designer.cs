@@ -1,7 +1,7 @@
 ﻿
 namespace EYM
 {
-    partial class Form1
+    partial class HomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace EYM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -38,10 +38,8 @@ namespace EYM
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -51,7 +49,7 @@ namespace EYM
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
+            this.signIn = new DevExpress.XtraBars.BarHeaderItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -66,8 +64,7 @@ namespace EYM
             this.ribbonPageGroup2,
             this.ribbonPageGroup1,
             this.ribbonPageGroup3,
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup4});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "İŞLEMLER";
             // 
@@ -109,22 +106,9 @@ namespace EYM
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded;
-            // 
-            // barButtonItem9
-            // 
-            this.barButtonItem9.Caption = "DERS PROGRAMI";
-            this.barButtonItem9.Id = 16;
-            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
-            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
-            this.barButtonItem9.Name = "barButtonItem9";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem10);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
             // barButtonItem10
             // 
@@ -134,10 +118,10 @@ namespace EYM
             this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
             this.barButtonItem10.Name = "barButtonItem10";
             // 
-            // ribbonPageGroup5
+            // ribbonPageGroup4
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem11);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem11);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
             // barButtonItem11
             // 
@@ -213,12 +197,12 @@ namespace EYM
             // ribbonControl1
             // 
             this.ribbonControl1.BackColor = System.Drawing.Color.SteelBlue;
-            this.ribbonControl1.CaptionBarItemLinks.Add(this.barHeaderItem1);
+            this.ribbonControl1.CaptionBarItemLinks.Add(this.signIn);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.ImageAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.ribbonControl1.ImeMode = System.Windows.Forms.ImeMode.On;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barHeaderItem1,
+            this.signIn,
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
             this.addBtn,
@@ -230,38 +214,39 @@ namespace EYM
             this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItem8,
-            this.barButtonItem9,
             this.barButtonItem10,
             this.barButtonItem11});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonControl1.MaxItemId = 22;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsAnimation.PageCategoryShowAnimation = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.OptionsMenuMinWidth = 440;
+            this.ribbonControl1.OptionsMenuMinWidth = 550;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2});
-            this.ribbonControl1.Size = new System.Drawing.Size(1421, 185);
+            this.ribbonControl1.Size = new System.Drawing.Size(1421, 175);
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
-            // barHeaderItem1
+            // signIn
             // 
-            this.barHeaderItem1.Caption = "GİRİŞ YAPAN KULLANICI:";
-            this.barHeaderItem1.Id = 21;
-            this.barHeaderItem1.Name = "barHeaderItem1";
+            this.signIn.Caption = "GİRİŞ YAPAN KULLANICI:";
+            this.signIn.Id = 21;
+            this.signIn.Name = "signIn";
             // 
-            // Form1
+            // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1421, 786);
             this.Controls.Add(this.ribbonControl1);
-            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Form1.IconOptions.Image")));
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("HomePage.IconOptions.Image")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "HomePage";
             this.Ribbon = this.ribbonControl1;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ENGELSİZ YAŞAM MERKEZİ BİLGİ SİSTEMİ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -287,11 +272,10 @@ namespace EYM
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
+        private DevExpress.XtraBars.BarHeaderItem signIn;
+       
     }
 }
 

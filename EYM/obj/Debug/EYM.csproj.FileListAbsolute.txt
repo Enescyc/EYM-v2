@@ -49,7 +49,6 @@ C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\es\DevExpress.Pdf.v20.1.Core.resou
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.csproj.AssemblyReference.cache
-C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Form1.resources
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Properties.Resources.resources
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.csproj.GenerateResource.cache
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.exe.licenses
@@ -241,9 +240,16 @@ C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\de\DevExpress.XtraNavBar.v20.1.res
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\es\DevExpress.XtraNavBar.v20.1.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ja\DevExpress.XtraNavBar.v20.1.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ru\DevExpress.XtraNavBar.v20.1.resources.dll
-C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Employee.resources
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EntityFramework.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EntityFramework.xml
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.RollCall.resources
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.HomePage.resources
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.EmployeePage.resources
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\DevExpress.Dialogs.v20.1.Core.dll
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\DevExpress.XtraDialogs.v20.1.dll
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\DevExpress.XtraDialogs.v20.1.xml
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\de\DevExpress.Dialogs.v20.1.Core.resources.dll
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\es\DevExpress.Dialogs.v20.1.Core.resources.dll
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ja\DevExpress.Dialogs.v20.1.Core.resources.dll
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ru\DevExpress.Dialogs.v20.1.Core.resources.dll
