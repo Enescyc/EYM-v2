@@ -253,3 +253,4 @@ C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\de\DevExpress.Dialogs.v20.1.Core.r
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\es\DevExpress.Dialogs.v20.1.Core.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ja\DevExpress.Dialogs.v20.1.Core.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ru\DevExpress.Dialogs.v20.1.Core.resources.dll
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.LoginPage.resources
