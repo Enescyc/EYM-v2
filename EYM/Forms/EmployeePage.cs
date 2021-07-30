@@ -67,11 +67,7 @@ namespace EYM.Forms
 
 
             }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            catch (Exception err) { XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
         }
 
@@ -107,7 +103,7 @@ namespace EYM.Forms
             catch (Exception err)
             {
 
-                XtraMessageBox.Show("Hata" + err.ToString());
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
@@ -121,11 +117,20 @@ namespace EYM.Forms
         private void deleteEmployeBtn_Click(object sender, EventArgs e)
         {
             // this funciton deletes which employee is selected
-            var deleteEmployee = db.Employee.Find(deleteID);
-            db.Employee.Remove(deleteEmployee);
-            db.SaveChanges();
-            XtraMessageBox.Show("Çalışan Kaydı Silindi.", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            gridControl1.DataSource = db.Employee.ToList();
+            try
+            {
+                var deleteEmployee = db.Employee.Find(deleteID);
+                db.Employee.Remove(deleteEmployee);
+                db.SaveChanges();
+                XtraMessageBox.Show("Çalışan Kaydı Silindi.", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gridControl1.DataSource = db.Employee.ToList();
+            }
+            catch (Exception err)
+            {
+
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        
 
 
 
@@ -144,10 +149,10 @@ namespace EYM.Forms
                 loadStatus();
                 XtraMessageBox.Show("Yeni Görev Eklendi." + gorev.StatusName, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception)
+            catch (Exception err )
             {
 
-                throw;
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -165,7 +170,7 @@ namespace EYM.Forms
             catch (Exception err)
             {
 
-                throw err;
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
@@ -186,21 +191,29 @@ namespace EYM.Forms
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
 
-            
-            DateTime birthday;
-            string changeBirthday=gridView1.GetFocusedRowCellValue("BirthDay").ToString();
-            birthday = System.DateTime.Parse(changeBirthday);
+            try
+            {
+                DateTime birthday;
+                string changeBirthday = gridView1.GetFocusedRowCellValue("BirthDay").ToString();
+                birthday = System.DateTime.Parse(changeBirthday);
 
-            txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
-            Surname.Text = gridView1.GetFocusedRowCellValue("Surname").ToString();
-            Birthday.DateTime = birthday;
-            BloodClass.Text = gridView1.GetFocusedRowCellValue("BloodClass").ToString();
-            TelephoneNumber.Text = gridView1.GetFocusedRowCellValue("TelephoneNumber").ToString();
-            Adress.Text = gridView1.GetFocusedRowCellValue("Adress").ToString();
-            Gender.Text = gridView1.GetFocusedRowCellValue("Gender").ToString();
-            txtStatus.Text = gridView1.GetFocusedRowCellValue("Status").ToString();
-            deleteID = int.Parse(gridView1.GetFocusedRowCellValue("EmployeeID").ToString());
-            IdentificationNumber.Text = gridView1.GetFocusedRowCellValue("IdentificationNumber").ToString();
+                txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
+                Surname.Text = gridView1.GetFocusedRowCellValue("Surname").ToString();
+                Birthday.DateTime = birthday;
+                BloodClass.Text = gridView1.GetFocusedRowCellValue("BloodClass").ToString();
+                TelephoneNumber.Text = gridView1.GetFocusedRowCellValue("TelephoneNumber").ToString();
+                Adress.Text = gridView1.GetFocusedRowCellValue("Adress").ToString();
+                Gender.Text = gridView1.GetFocusedRowCellValue("Gender").ToString();
+                txtStatus.Text = gridView1.GetFocusedRowCellValue("Status").ToString();
+                deleteID = int.Parse(gridView1.GetFocusedRowCellValue("EmployeeID").ToString());
+                IdentificationNumber.Text = gridView1.GetFocusedRowCellValue("IdentificationNumber").ToString();
+            }
+            catch (Exception err)
+            {
+
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.."  +err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
         }
 
         private void xtraOpenFileDialog2_FileOk(object sender, CancelEventArgs e)
@@ -234,10 +247,10 @@ namespace EYM.Forms
                
                
             }
-            catch (Exception)
+            catch (Exception err)
             {
 
-                throw;
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.."+err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
            
 
