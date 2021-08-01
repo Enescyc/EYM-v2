@@ -117,7 +117,7 @@ namespace EYM.Forms
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1229, 606);
+            this.panelControl1.Size = new System.Drawing.Size(1227, 605);
             this.panelControl1.TabIndex = 0;
             // 
             // panelControl2
@@ -126,7 +126,7 @@ namespace EYM.Forms
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(466, 602);
+            this.panelControl2.Size = new System.Drawing.Size(466, 601);
             this.panelControl2.TabIndex = 0;
             // 
             // groupControl1
@@ -137,7 +137,7 @@ namespace EYM.Forms
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(10);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(462, 598);
+            this.groupControl1.Size = new System.Drawing.Size(462, 597);
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Yetkilendirme İşlemi";
             // 
@@ -172,8 +172,13 @@ namespace EYM.Forms
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F),
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F)});
-            this.tablePanel1.Size = new System.Drawing.Size(462, 573);
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 40F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
+            this.tablePanel1.Size = new System.Drawing.Size(462, 572);
             this.tablePanel1.TabIndex = 2;
             // 
             // UpdatePassword
@@ -329,7 +334,7 @@ namespace EYM.Forms
             this.tablePanel2.Name = "tablePanel2";
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel2.Size = new System.Drawing.Size(759, 602);
+            this.tablePanel2.Size = new System.Drawing.Size(757, 601);
             this.tablePanel2.TabIndex = 1;
             // 
             // groupControl2
@@ -339,7 +344,7 @@ namespace EYM.Forms
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
             this.groupControl2.Name = "groupControl2";
             this.tablePanel2.SetRow(this.groupControl2, 0);
-            this.groupControl2.Size = new System.Drawing.Size(379, 596);
+            this.groupControl2.Size = new System.Drawing.Size(378, 595);
             this.groupControl2.TabIndex = 10;
             this.groupControl2.Text = "PERSONEL BİLGİLERİ";
             // 
@@ -349,7 +354,7 @@ namespace EYM.Forms
             this.gridEmploye.Location = new System.Drawing.Point(2, 26);
             this.gridEmploye.MainView = this.gridViewEmp;
             this.gridEmploye.Name = "gridEmploye";
-            this.gridEmploye.Size = new System.Drawing.Size(375, 568);
+            this.gridEmploye.Size = new System.Drawing.Size(374, 567);
             this.gridEmploye.TabIndex = 1;
             this.gridEmploye.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewEmp});
@@ -364,10 +369,10 @@ namespace EYM.Forms
             // 
             this.tablePanel2.SetColumn(this.groupControl3, 1);
             this.groupControl3.Controls.Add(this.gridLogin);
-            this.groupControl3.Location = new System.Drawing.Point(388, 16);
+            this.groupControl3.Location = new System.Drawing.Point(387, 15);
             this.groupControl3.Name = "groupControl3";
             this.tablePanel2.SetRow(this.groupControl3, 0);
-            this.groupControl3.Size = new System.Drawing.Size(368, 570);
+            this.groupControl3.Size = new System.Drawing.Size(367, 570);
             this.groupControl3.TabIndex = 11;
             this.groupControl3.Text = "KULLANICI ADI VE ŞİFRELER";
             // 
@@ -377,7 +382,7 @@ namespace EYM.Forms
             this.gridLogin.Location = new System.Drawing.Point(2, 26);
             this.gridLogin.MainView = this.cardView1;
             this.gridLogin.Name = "gridLogin";
-            this.gridLogin.Size = new System.Drawing.Size(364, 542);
+            this.gridLogin.Size = new System.Drawing.Size(363, 542);
             this.gridLogin.TabIndex = 1;
             this.gridLogin.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.cardView1});
@@ -392,7 +397,7 @@ namespace EYM.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 606);
+            this.ClientSize = new System.Drawing.Size(1227, 605);
             this.Controls.Add(this.panelControl1);
             this.Name = "Authority";
             this.Text = "Authority";

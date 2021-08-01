@@ -34,13 +34,17 @@ namespace EYM
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.addBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.StudentsBtn = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.EmployeeBtn = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.RollCallBtn = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.AuthBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
@@ -64,7 +68,9 @@ namespace EYM
             this.ribbonPageGroup2,
             this.ribbonPageGroup1,
             this.ribbonPageGroup3,
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup6});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "İŞLEMLER";
             // 
@@ -72,65 +78,91 @@ namespace EYM
             // 
             this.ribbonPageGroup2.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup2.ImageOptions.Image")));
-            this.ribbonPageGroup2.ItemLinks.Add(this.addBtn);
+            this.ribbonPageGroup2.ItemLinks.Add(this.StudentsBtn);
             this.ribbonPageGroup2.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.TwoRows;
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded;
             // 
-            // addBtn
+            // StudentsBtn
             // 
-            this.addBtn.Caption = "ÖĞRENCİLER";
-            this.addBtn.Id = 1;
-            this.addBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addBtn.ImageOptions.Image")));
-            this.addBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("addBtn.ImageOptions.LargeImage")));
-            this.addBtn.Name = "addBtn";
-            this.addBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.addBtn_ItemClick);
+            this.StudentsBtn.Caption = "ÖĞRENCİLER";
+            this.StudentsBtn.Id = 1;
+            this.StudentsBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("StudentsBtn.ImageOptions.Image")));
+            this.StudentsBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("StudentsBtn.ImageOptions.LargeImage")));
+            this.StudentsBtn.Name = "StudentsBtn";
+            this.StudentsBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.addBtn_ItemClick);
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup1.ImageOptions.Image")));
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup1.ItemLinks.Add(this.EmployeeBtn);
             this.ribbonPageGroup1.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded;
             // 
-            // barButtonItem8
+            // EmployeeBtn
             // 
-            this.barButtonItem8.Caption = "PERSONELLER";
-            this.barButtonItem8.Id = 15;
-            this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
-            this.barButtonItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
-            this.barButtonItem8.Name = "barButtonItem8";
-            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
+            this.EmployeeBtn.Caption = "PERSONELLER";
+            this.EmployeeBtn.Id = 15;
+            this.EmployeeBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("EmployeeBtn.ImageOptions.Image")));
+            this.EmployeeBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("EmployeeBtn.ImageOptions.LargeImage")));
+            this.EmployeeBtn.Name = "EmployeeBtn";
+            this.EmployeeBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup3.ItemLinks.Add(this.RollCallBtn);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded;
             // 
-            // barButtonItem10
+            // RollCallBtn
             // 
-            this.barButtonItem10.Caption = "YOKLAMALAR";
-            this.barButtonItem10.Id = 17;
-            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
-            this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
-            this.barButtonItem10.Name = "barButtonItem10";
+            this.RollCallBtn.Caption = "YOKLAMALAR";
+            this.RollCallBtn.Id = 17;
+            this.RollCallBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("RollCallBtn.ImageOptions.Image")));
+            this.RollCallBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("RollCallBtn.ImageOptions.LargeImage")));
+            this.RollCallBtn.Name = "RollCallBtn";
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem11);
+            this.ribbonPageGroup4.ItemLinks.Add(this.AuthBtn);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
-            // barButtonItem11
+            // AuthBtn
             // 
-            this.barButtonItem11.Caption = "YETKİLER";
-            this.barButtonItem11.Id = 18;
-            this.barButtonItem11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.Image")));
-            this.barButtonItem11.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.LargeImage")));
-            this.barButtonItem11.Name = "barButtonItem11";
-            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            this.AuthBtn.Caption = "YETKİLER";
+            this.AuthBtn.Id = 18;
+            this.AuthBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("AuthBtn.ImageOptions.Image")));
+            this.AuthBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("AuthBtn.ImageOptions.LargeImage")));
+            this.AuthBtn.Name = "AuthBtn";
+            this.AuthBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "ÖĞRENCİ İSTATİSTİKLERİ";
+            this.barButtonItem8.Id = 22;
+            this.barButtonItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem8.ImageOptions.SvgImage")));
+            this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick_1);
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "PERSONEL İSTATİSTİKLERİ";
+            this.barButtonItem9.Id = 23;
+            this.barButtonItem9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem9.ImageOptions.SvgImage")));
+            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -199,7 +231,7 @@ namespace EYM
             this.signIn,
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
-            this.addBtn,
+            this.StudentsBtn,
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
@@ -207,12 +239,14 @@ namespace EYM
             this.barButtonItem5,
             this.barButtonItem6,
             this.barButtonItem7,
+            this.EmployeeBtn,
+            this.RollCallBtn,
+            this.AuthBtn,
             this.barButtonItem8,
-            this.barButtonItem10,
-            this.barButtonItem11});
+            this.barButtonItem9});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbonControl1.MaxItemId = 22;
+            this.ribbonControl1.MaxItemId = 25;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsAnimation.PageCategoryShowAnimation = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.OptionsMenuMinWidth = 550;
@@ -233,6 +267,7 @@ namespace EYM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1421, 786);
             this.Controls.Add(this.ribbonControl1);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("HomePage.IconOptions.Image")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -252,7 +287,7 @@ namespace EYM
         #endregion
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.BarButtonItem addBtn;
+        private DevExpress.XtraBars.BarButtonItem StudentsBtn;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
@@ -265,11 +300,14 @@ namespace EYM
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarButtonItem EmployeeBtn;
+        private DevExpress.XtraBars.BarButtonItem RollCallBtn;
+        private DevExpress.XtraBars.BarButtonItem AuthBtn;
         private DevExpress.XtraBars.BarHeaderItem signIn;
-       
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
     }
 }
 

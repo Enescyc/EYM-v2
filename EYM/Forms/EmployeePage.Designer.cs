@@ -99,7 +99,7 @@ namespace EYM.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1275, 712);
+            this.panel1.Size = new System.Drawing.Size(1277, 715);
             this.panel1.TabIndex = 0;
             // 
             // panelControl1
@@ -108,7 +108,7 @@ namespace EYM.Forms
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(516, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(759, 712);
+            this.panelControl1.Size = new System.Drawing.Size(761, 715);
             this.panelControl1.TabIndex = 12;
             // 
             // gridControl1
@@ -122,7 +122,7 @@ namespace EYM.Forms
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(755, 708);
+            this.gridControl1.Size = new System.Drawing.Size(757, 711);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -143,7 +143,7 @@ namespace EYM.Forms
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(516, 712);
+            this.panel2.Size = new System.Drawing.Size(516, 715);
             this.panel2.TabIndex = 11;
             // 
             // groupControl1
@@ -174,7 +174,7 @@ namespace EYM.Forms
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(10, 10);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(496, 692);
+            this.groupControl1.Size = new System.Drawing.Size(496, 695);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "PERSONEL BİLGİLERİ";
             // 
@@ -626,7 +626,7 @@ namespace EYM.Forms
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 712);
+            this.ClientSize = new System.Drawing.Size(1277, 715);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("EmployeePage.IconOptions.Image")));
@@ -688,16 +688,16 @@ namespace EYM.Forms
         private DevExpress.XtraEditors.SimpleButton newEmployeBtn;
         private DevExpress.XtraEditors.SimpleButton UpdateEmployeeBtn;
         private DevExpress.XtraEditors.SimpleButton deleteEmployeBtn;
+        private DevExpress.XtraEditors.TextEdit TelephoneNumber;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog1;
         private DevExpress.XtraEditors.ComboBoxEdit CheckStatus;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.TextEdit TelephoneNumber;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.ComboBoxEdit StatusName;
-        private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog1;
     }
 }

@@ -43,7 +43,7 @@ namespace EYM.Forms
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.StudentsName = new DevExpress.XtraEditors.TextEdit();
+            this.LessonStudentName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.comboLessons = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -91,7 +91,7 @@ namespace EYM.Forms
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
             this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LessonStudentName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboLessons.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -123,7 +123,7 @@ namespace EYM.Forms
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(11, 11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1622, 867);
+            this.panel1.Size = new System.Drawing.Size(1624, 870);
             this.panel1.TabIndex = 0;
             // 
             // panelControl1
@@ -132,7 +132,7 @@ namespace EYM.Forms
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(527, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(755, 867);
+            this.panelControl1.Size = new System.Drawing.Size(757, 870);
             this.panelControl1.TabIndex = 3;
             // 
             // gridControl1
@@ -141,12 +141,11 @@ namespace EYM.Forms
             this.gridControl1.Location = new System.Drawing.Point(2, 2);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(751, 863);
-            this.gridControl1.TabIndex = 0;
+            this.gridControl1.Size = new System.Drawing.Size(753, 866);
+            this.gridControl1.TabIndex = 16;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.gridControl1.DataSourceChanged += new System.EventHandler(this.gridControl1_DataSourceChanged);
-            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
@@ -158,9 +157,9 @@ namespace EYM.Forms
             // 
             this.panelControl2.Controls.Add(this.groupControl2);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl2.Location = new System.Drawing.Point(1282, 0);
+            this.panelControl2.Location = new System.Drawing.Point(1284, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(340, 867);
+            this.panelControl2.Size = new System.Drawing.Size(340, 870);
             this.panelControl2.TabIndex = 2;
             // 
             // groupControl2
@@ -173,7 +172,7 @@ namespace EYM.Forms
             this.groupControl2.Margin = new System.Windows.Forms.Padding(10);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Padding = new System.Windows.Forms.Padding(10);
-            this.groupControl2.Size = new System.Drawing.Size(336, 863);
+            this.groupControl2.Size = new System.Drawing.Size(336, 866);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "DERS İŞLEMLERİ";
             // 
@@ -202,6 +201,7 @@ namespace EYM.Forms
             this.simpleButton1.Size = new System.Drawing.Size(306, 29);
             this.simpleButton1.TabIndex = 37;
             this.simpleButton1.Text = "DERSİ SİL";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // lessonGrid
             // 
@@ -219,6 +219,7 @@ namespace EYM.Forms
             // 
             this.gridView2.GridControl = this.lessonGrid;
             this.gridView2.Name = "gridView2";
+            this.gridView2.DoubleClick += new System.EventHandler(this.gridView2_DoubleClick);
             // 
             // tablePanel2
             // 
@@ -229,7 +230,7 @@ namespace EYM.Forms
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 61.38F)});
             this.tablePanel2.Controls.Add(this.simpleButton4);
             this.tablePanel2.Controls.Add(this.labelControl14);
-            this.tablePanel2.Controls.Add(this.StudentsName);
+            this.tablePanel2.Controls.Add(this.LessonStudentName);
             this.tablePanel2.Controls.Add(this.labelControl13);
             this.tablePanel2.Controls.Add(this.comboLessons);
             this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -251,6 +252,7 @@ namespace EYM.Forms
             this.simpleButton4.Size = new System.Drawing.Size(168, 29);
             this.simpleButton4.TabIndex = 36;
             this.simpleButton4.Text = "DERSİ KAYDET";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // labelControl14
             // 
@@ -263,17 +265,17 @@ namespace EYM.Forms
             this.labelControl14.TabIndex = 35;
             this.labelControl14.Text = "DERS SEÇİMİ:";
             // 
-            // StudentsName
+            // LessonStudentName
             // 
-            this.tablePanel2.SetColumn(this.StudentsName, 1);
-            this.StudentsName.Location = new System.Drawing.Point(143, 8);
-            this.StudentsName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.StudentsName.Name = "StudentsName";
-            this.StudentsName.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.StudentsName.Properties.Appearance.Options.UseFont = true;
-            this.tablePanel2.SetRow(this.StudentsName, 0);
-            this.StudentsName.Size = new System.Drawing.Size(164, 24);
-            this.StudentsName.TabIndex = 3;
+            this.tablePanel2.SetColumn(this.LessonStudentName, 1);
+            this.LessonStudentName.Location = new System.Drawing.Point(143, 8);
+            this.LessonStudentName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.LessonStudentName.Name = "LessonStudentName";
+            this.LessonStudentName.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LessonStudentName.Properties.Appearance.Options.UseFont = true;
+            this.tablePanel2.SetRow(this.LessonStudentName, 0);
+            this.LessonStudentName.Size = new System.Drawing.Size(164, 24);
+            this.LessonStudentName.TabIndex = 3;
             // 
             // labelControl13
             // 
@@ -308,7 +310,7 @@ namespace EYM.Forms
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(527, 867);
+            this.panel2.Size = new System.Drawing.Size(527, 870);
             this.panel2.TabIndex = 0;
             // 
             // groupControl1
@@ -335,7 +337,7 @@ namespace EYM.Forms
             this.groupControl1.Margin = new System.Windows.Forms.Padding(10);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Padding = new System.Windows.Forms.Padding(10);
-            this.groupControl1.Size = new System.Drawing.Size(527, 867);
+            this.groupControl1.Size = new System.Drawing.Size(527, 870);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "KİŞİSEL BİLGİLER";
             // 
@@ -409,9 +411,10 @@ namespace EYM.Forms
             this.TelephoneNumber.Name = "TelephoneNumber";
             this.TelephoneNumber.Properties.Mask.EditMask = "(999) 000-0000";
             this.TelephoneNumber.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.TelephoneNumber.Properties.MaxLength = 15;
             this.InfoTable.SetRow(this.TelephoneNumber, 5);
             this.TelephoneNumber.Size = new System.Drawing.Size(292, 24);
-            this.TelephoneNumber.TabIndex = 29;
+            this.TelephoneNumber.TabIndex = 6;
             // 
             // UpdateBtn
             // 
@@ -465,7 +468,7 @@ namespace EYM.Forms
             this.DeleteBtn.Name = "DeleteBtn";
             this.InfoTable.SetRow(this.DeleteBtn, 14);
             this.DeleteBtn.Size = new System.Drawing.Size(292, 39);
-            this.DeleteBtn.TabIndex = 28;
+            this.DeleteBtn.TabIndex = 14;
             this.DeleteBtn.Text = "SİL";
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
@@ -486,7 +489,7 @@ namespace EYM.Forms
             this.Gender.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.InfoTable.SetRow(this.Gender, 9);
             this.Gender.Size = new System.Drawing.Size(288, 24);
-            this.Gender.TabIndex = 11;
+            this.Gender.TabIndex = 10;
             // 
             // labelControl12
             // 
@@ -529,7 +532,7 @@ namespace EYM.Forms
             this.labelControl3.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl3, 2);
             this.labelControl3.Size = new System.Drawing.Size(144, 22);
-            this.labelControl3.TabIndex = 2;
+            this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "KİMLİK NUMARASI:";
             // 
             // saveBtn
@@ -556,7 +559,7 @@ namespace EYM.Forms
             this.saveBtn.Name = "saveBtn";
             this.InfoTable.SetRow(this.saveBtn, 13);
             this.saveBtn.Size = new System.Drawing.Size(292, 39);
-            this.saveBtn.TabIndex = 14;
+            this.saveBtn.TabIndex = 13;
             this.saveBtn.Text = "KAYDET";
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
@@ -568,9 +571,10 @@ namespace EYM.Forms
             this.DisabledInfo.Name = "DisabledInfo";
             this.DisabledInfo.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.DisabledInfo.Properties.Appearance.Options.UseFont = true;
+            this.DisabledInfo.Properties.MaxLength = 50;
             this.InfoTable.SetRow(this.DisabledInfo, 8);
             this.DisabledInfo.Size = new System.Drawing.Size(288, 24);
-            this.DisabledInfo.TabIndex = 10;
+            this.DisabledInfo.TabIndex = 9;
             // 
             // labelControl4
             // 
@@ -580,7 +584,7 @@ namespace EYM.Forms
             this.labelControl4.Padding = new System.Windows.Forms.Padding(6);
             this.InfoTable.SetRow(this.labelControl4, 3);
             this.labelControl4.Size = new System.Drawing.Size(125, 22);
-            this.labelControl4.TabIndex = 3;
+            this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "DOĞUM TARİHİ:";
             // 
             // labelControl9
@@ -608,7 +612,7 @@ namespace EYM.Forms
             // DisabledRate
             // 
             this.InfoTable.SetColumn(this.DisabledRate, 1);
-            this.DisabledRate.EditValue = "%";
+            this.DisabledRate.EditValue = "";
             this.DisabledRate.Location = new System.Drawing.Point(200, 226);
             this.DisabledRate.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.DisabledRate.Name = "DisabledRate";
@@ -617,7 +621,7 @@ namespace EYM.Forms
             this.DisabledRate.Properties.Mask.EditMask = "%";
             this.InfoTable.SetRow(this.DisabledRate, 7);
             this.DisabledRate.Size = new System.Drawing.Size(288, 24);
-            this.DisabledRate.TabIndex = 9;
+            this.DisabledRate.TabIndex = 8;
             // 
             // labelControl7
             // 
@@ -668,7 +672,7 @@ namespace EYM.Forms
             this.SpecialEducation.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.InfoTable.SetRow(this.SpecialEducation, 6);
             this.SpecialEducation.Size = new System.Drawing.Size(288, 24);
-            this.SpecialEducation.TabIndex = 8;
+            this.SpecialEducation.TabIndex = 7;
             // 
             // StudentInfo
             // 
@@ -678,9 +682,10 @@ namespace EYM.Forms
             this.StudentInfo.Name = "StudentInfo";
             this.StudentInfo.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.StudentInfo.Properties.Appearance.Options.UseFont = true;
+            this.StudentInfo.Properties.MaxLength = 100;
             this.InfoTable.SetRow(this.StudentInfo, 11);
             this.StudentInfo.Size = new System.Drawing.Size(288, 48);
-            this.StudentInfo.TabIndex = 13;
+            this.StudentInfo.TabIndex = 12;
             // 
             // labelControl11
             // 
@@ -701,9 +706,10 @@ namespace EYM.Forms
             this.Adress.Name = "Adress";
             this.Adress.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Adress.Properties.Appearance.Options.UseFont = true;
+            this.Adress.Properties.MaxLength = 100;
             this.InfoTable.SetRow(this.Adress, 10);
             this.Adress.Size = new System.Drawing.Size(288, 48);
-            this.Adress.TabIndex = 12;
+            this.Adress.TabIndex = 11;
             // 
             // labelControl10
             // 
@@ -748,6 +754,7 @@ namespace EYM.Forms
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtName.Properties.Appearance.Options.UseFont = true;
+            this.txtName.Properties.MaxLength = 25;
             this.InfoTable.SetRow(this.txtName, 0);
             this.txtName.Size = new System.Drawing.Size(288, 24);
             this.txtName.TabIndex = 1;
@@ -760,6 +767,7 @@ namespace EYM.Forms
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSurname.Properties.Appearance.Options.UseFont = true;
+            this.txtSurname.Properties.MaxLength = 30;
             this.InfoTable.SetRow(this.txtSurname, 1);
             this.txtSurname.Size = new System.Drawing.Size(288, 24);
             this.txtSurname.TabIndex = 2;
@@ -772,6 +780,7 @@ namespace EYM.Forms
             this.IdentificationNumber.Name = "IdentificationNumber";
             this.IdentificationNumber.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.IdentificationNumber.Properties.Appearance.Options.UseFont = true;
+            this.IdentificationNumber.Properties.MaxLength = 11;
             this.InfoTable.SetRow(this.IdentificationNumber, 2);
             this.IdentificationNumber.Size = new System.Drawing.Size(288, 24);
             this.IdentificationNumber.TabIndex = 3;
@@ -798,7 +807,7 @@ namespace EYM.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.ClientSize = new System.Drawing.Size(1644, 889);
+            this.ClientSize = new System.Drawing.Size(1646, 892);
             this.Controls.Add(this.panel1);
             this.Name = "students";
             this.Padding = new System.Windows.Forms.Padding(11);
@@ -822,7 +831,7 @@ namespace EYM.Forms
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
             this.tablePanel2.ResumeLayout(false);
             this.tablePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LessonStudentName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboLessons.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -886,7 +895,7 @@ namespace EYM.Forms
         private DevExpress.XtraEditors.ComboBoxEdit comboLessons;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.TextEdit StudentsName;
+        private DevExpress.XtraEditors.TextEdit LessonStudentName;
         private DevExpress.XtraEditors.TextEdit TelephoneNumber;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;

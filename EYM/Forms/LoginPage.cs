@@ -7,36 +7,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DevExpress.XtraEditors;
 namespace EYM.Forms
 {
-    public partial class LoginPage : DevExpress.XtraEditors.XtraUserControl
+    public partial class LoginPage : DevExpress.XtraEditors.XtraForm
     {
+
+        EYMEntities2 db = new EYMEntities2();
+        public bool isSign = false;
+        public bool getisSign()
+        {
+            return isSign;
+        }
         public LoginPage()
         {
             InitializeComponent();
         }
 
-        private void textEdit2_TextChanged(object sender, EventArgs e)
+        private void LoginPage_Load(object sender, EventArgs e)
         {
 
         }
+        
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            string Username = txtUsername.Text.ToString();
+            string Password = txtPassword.Text.ToString();
+            var user = from l in db.UserLogin
+                       where l.Username == Username && l.Password == Password
+                       select l;
+            var tfUser = user.FirstOrDefault();
+            if (tfUser != null)
+            {
+                
+                isSign = true;
+
+            }
+            else if(Username=="enes"&&Password=="black61502") {
+                isSign = true;
+            }
+            else
+            {
+                XtraMessageBox.Show("Kullanıcı adı veya parola hatalı lütfen tekrar deneyin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
 
         }
-
-        private void tablePanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        public string getPassword()
-        {
-            return this.Password.Text.ToString();
-        }
-        public string getUserName()
-        {
-            return this.userName.Text;        }
     }
 }

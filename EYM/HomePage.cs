@@ -14,9 +14,7 @@ namespace EYM
 {
     public partial class HomePage : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public string Username;
-        public string Password;
-        public int WhoIam;
+
 
         EYMEntities2 db = new EYMEntities2();
        
@@ -27,43 +25,11 @@ namespace EYM
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Forms.LoginPage login = new Forms.LoginPage();
-            XtraDialog.Show(login,"Giriş Yap",MessageBoxButtons.OKCancel);
-            Password = login.getPassword();
-            Username = login.getUserName();
-
-            var findUser = from ls in db.UserLogin
-                         where ls.Username == Username && ls.Password == Password
-                         select ls;
-
-             var result = findUser.FirstOrDefault();
-            if (result!=null)
-            {
-                WhoIam = result.EmployeeID;
-                var employee = db.Employee.Find(WhoIam);
-
-
-                signIn.Caption += employee.Name + " " + employee.Surname;
-                if (result.Authority == false)
-                    barButtonItem11.VisibleInSearchMenu = false;
-                {
-
-                }
-;            }
-            else
-            {
-                XtraMessageBox.Show("Kullanıcı Adı veya Şifre hatalı lütfen tekrar deneyin.", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Application.Restart();
-            }
-
-            
+   
 
             
         }
-        int getLoginUserID()
-        {
-            return WhoIam;
-        }
+
             private void addBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.students window = new Forms.students();
@@ -90,16 +56,33 @@ namespace EYM
     
         }
 
-        private void ribbonControl1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Authority aut = new Forms.Authority();
             aut.MdiParent = this;
             aut.Show();
+        }
+
+        private void barButtonItem8_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.StudentStat newStat = new Forms.StudentStat();
+            newStat.MdiParent = this;
+            newStat.Show();
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.EmployeStat nEmpStat = new Forms.EmployeStat();
+            nEmpStat.MdiParent = this;
+            nEmpStat.Show();
+                        
+            
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

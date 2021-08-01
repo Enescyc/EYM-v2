@@ -35,7 +35,7 @@ namespace EYM.Forms
 
 
 
-
+                      comboLessons.Properties.Items.Clear();
                       gridControl1.DataSource = db.Students.ToList();
                       lessonGrid.DataSource = lessons.ToList();
             var listlesson = db.Lessons.ToList().ToArray();
@@ -45,7 +45,22 @@ namespace EYM.Forms
                 comboLessons.Properties.Items.Add(listlesson[i].LessonName);
             }
         }
+        private void changeGridColumnNames()
+        {
+            gridView1.Columns["Name"].Caption = "Öğrenci Adı";
+            gridView1.Columns["Surname"].Caption = "Öğrenci Soy Adı";
+            gridView1.Columns["BirthDay"].Caption = "Doğum Tarihi";
+            gridView1.Columns["IdentificationNumber"].Caption = "Kimlik Numarası";
+            gridView1.Columns["BloodClass"].Caption = "Kan Grubu";
+            gridView1.Columns["TelephoneNumber"].Caption = "Telefon Numarası";
+            gridView1.Columns["DisabledRatio"].Caption = "Engel Oranı";
+            gridView1.Columns["DisabledInfo"].Caption = "Engel Bilgisi";
+            gridView1.Columns["StudentInfo"].Caption = "Öğrenci Hakkında";
+            gridView1.Columns["SpecialEducation"].Caption = "Özel Öğretim Durumu";
+            gridView1.Columns["Gender"].Caption = "Cinsiyet";
+            gridView1.Columns["StudentID"].Caption = "Kayıt Numarası";
 
+        }
         private void gridControl1_DataSourceChanged(object sender, EventArgs e)
         {
            
@@ -56,8 +71,9 @@ namespace EYM.Forms
             try
             {
               LoadData();
-                gridView1.Columns["LessonAndStudent"].Visible = false;
-            
+              gridView1.Columns["LessonAndStudent"].Visible = false;
+                gridView1.Columns["RollCall"].Visible = false;
+                changeGridColumnNames();
 
             }
             catch (Exception err)
@@ -69,10 +85,7 @@ namespace EYM.Forms
 
         }
 
-        private void gridControl1_DoubleClick(object sender, EventArgs e)
-        {
-           
-        }
+
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -91,6 +104,7 @@ namespace EYM.Forms
                 SpecialEducation.Text = gridView1.GetFocusedRowCellValue("SpecialEducation").ToString();
                 Gender.Text = gridView1.GetFocusedRowCellValue("Gender").ToString();
                 Birthday.DateTime = System.DateTime.Parse(gridView1.GetFocusedRowCellValue("BirthDay").ToString());
+                LessonStudentName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                 LoadData();
             }
             catch (Exception err )
@@ -100,7 +114,21 @@ namespace EYM.Forms
     
 
         }
-
+        private void clearText()
+        {
+            txtName.ResetText();
+            txtSurname.ResetText();
+            IdentificationNumber.ResetText();
+            BloodClass.ResetText();
+            TelephoneNumber.ResetText();
+            Adress.ResetText();
+            DisabledRate.ResetText();
+            DisabledInfo.ResetText();
+            StudentInfo.ResetText();
+            SpecialEducation.ResetText();
+            Gender.ResetText();
+            Birthday.ResetText();
+        }
         private void saveBtn_Click(object sender, EventArgs e)
         {
             try
@@ -114,7 +142,7 @@ namespace EYM.Forms
                 st.Gender = Gender.Text.ToUpper().ToString();
                 st.SpecialEducation = SpecialEducation.Text.ToString();
                 st.DisabledInfo = DisabledInfo.Text.ToUpper().ToString();
-                st.DisabledRatio = 0; //TO DO
+                st.DisabledRatio = short.Parse(DisabledRate.Text.ToUpper().ToString());
                 st.IdentificationNumber = IdentificationNumber.Text.ToUpper().ToString();
                 st.StudentInfo = StudentInfo.Text.ToUpper().ToString();
                 st.BirthDay = System.DateTime.Parse(Birthday.Text.ToString());
@@ -124,6 +152,7 @@ namespace EYM.Forms
 
                 XtraMessageBox.Show("Öğrenci Kaydı Tamamlandı.Kaydedilen Öğrenci Adı:" +st.Name, "Kayıt Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 LoadData();
+                clearText();
             }
             catch (Exception err )
             {
@@ -148,6 +177,7 @@ namespace EYM.Forms
                     db.SaveChanges();
                     XtraMessageBox.Show("Kayıt silindi.Silinen öğrenci:" + deleteStudent.Name+deleteStudent.Surname, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
+                    clearText();
                 }
                 else
                 {
@@ -178,13 +208,14 @@ namespace EYM.Forms
             updateStudent.Gender = Gender.Text.ToUpper().ToString();
             updateStudent.SpecialEducation = SpecialEducation.Text.ToString();
             updateStudent.DisabledInfo = DisabledInfo.Text.ToUpper().ToString();
-            updateStudent.DisabledRatio = 0; //TO DO
+            updateStudent.DisabledRatio = short.Parse(DisabledRate.Text.ToUpper().ToString());
             updateStudent.IdentificationNumber = IdentificationNumber.Text.ToUpper().ToString();
             updateStudent.StudentInfo = StudentInfo.Text.ToUpper().ToString();
             updateStudent.BirthDay = System.DateTime.Parse(Birthday.Text.ToString());
-            db.SaveChanges();
+                db.SaveChanges();
             XtraMessageBox.Show("Kayıt Güncellendi", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
+                clearText();
 
             }
             catch (Exception err)
@@ -194,6 +225,63 @@ namespace EYM.Forms
             }
 
 
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            // add new Lesson for students
+            try
+            {
+                LessonAndStudent nLesson = new LessonAndStudent();
+                nLesson.StudentID = StudentID;
+                string lesson = comboLessons.Text;
+                var findLesson = db.Lessons.FirstOrDefault(x => x.LessonName == lesson);
+                nLesson.LessonID = findLesson.ID;
+                db.LessonAndStudent.Add(nLesson);
+                db.SaveChanges();
+                LoadData();
+            }
+            catch (Exception err)
+            {
+
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            // delete lesson from db.LessonAndStudent
+            try
+            {
+                LessonAndStudent deleteLesson = new LessonAndStudent();
+                deleteLesson.StudentID = StudentID;
+                var lessonID = db.Lessons.FirstOrDefault(x => x.LessonName == comboLessons.Text);
+                var findLessonAndStudent = from l in db.LessonAndStudent
+                                           where l.LessonID == lessonID.ID && l.StudentID == StudentID
+                                           select l;
+                deleteLesson = findLessonAndStudent.FirstOrDefault();
+                db.LessonAndStudent.Remove(deleteLesson);
+                db.SaveChanges();
+                LoadData();
+            }
+            catch (Exception err)
+            {
+
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti.." + err, "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+        }
+
+        private void gridView2_DoubleClick(object sender, EventArgs e)
+        {
+            if (gridView2.GetFocusedRowCellValue("LessonName") != null)
+                comboLessons.Text = gridView2.GetFocusedRowCellValue("LessonName").ToString();  
+            else
+            {
+                XtraMessageBox.Show("Hay aksi bir şeyler ters gitti..","Hata!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

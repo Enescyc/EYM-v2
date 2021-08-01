@@ -115,10 +115,18 @@ namespace EYM.Forms
             try
             {
                 var deleteEmployee = db.Employee.Find(deleteID);
+                if (deleteEmployee !=null)
+                {
                 db.Employee.Remove(deleteEmployee);
                 db.SaveChanges();
                 XtraMessageBox.Show("Çalışan Kaydı Silindi.", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gridControl1.DataSource = db.Employee.ToList();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Seçili Kayıt Hatalı Lütfen Tekrar Deneyin." , "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+               
             }
             catch (Exception err)
             {
@@ -158,9 +166,19 @@ namespace EYM.Forms
             try
             {
                 var removeStatus = db.Status.First(x => x.StatusName == CheckStatus.Text.ToString());
+                if (removeStatus != null)
+                { 
+                        
                 db.Status.Remove(removeStatus);
                 db.SaveChanges();
                 XtraMessageBox.Show("Görev Silindi.:" + removeStatus.StatusName, "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadStatus();
+                }
+                else
+                {
+                    XtraMessageBox.Show("SEÇİLİ GÖREV BULUNAMADI.:", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+               
             }
             catch (Exception err)
             {
@@ -188,13 +206,16 @@ namespace EYM.Forms
 
             try
             {
-                DateTime birthday;
-                string changeBirthday = gridView1.GetFocusedRowCellValue("BirthDay").ToString();
-                birthday = System.DateTime.Parse(changeBirthday);
+              
+                
 
                 txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
                 Surname.Text = gridView1.GetFocusedRowCellValue("Surname").ToString();
-                Birthday.DateTime = birthday;
+                if (gridView1.GetFocusedRowCellValue("BirthDay")!=null)
+                {
+                    Birthday.DateTime = System.DateTime.Parse(gridView1.GetFocusedRowCellValue("BirthDay").ToString());
+                }
+                
                 BloodClass.Text = gridView1.GetFocusedRowCellValue("BloodClass").ToString();
                 TelephoneNumber.Text = gridView1.GetFocusedRowCellValue("TelephoneNumber").ToString();
                 Adress.Text = gridView1.GetFocusedRowCellValue("Adress").ToString();
