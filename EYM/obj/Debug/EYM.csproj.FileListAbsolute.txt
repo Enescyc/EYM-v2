@@ -295,3 +295,7 @@ C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.StudentReport.resources
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.EmployeeReport.resources
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Dashboards.EmployeReport.resources
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Dashboards.EmployeeDashboard.resources
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EYM.exe.manifest
+C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\EYM.application
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.exe.manifest
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.application

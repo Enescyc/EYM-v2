@@ -29,16 +29,19 @@ namespace EYM.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.signIn = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel1.SuspendLayout();
@@ -82,7 +85,7 @@ namespace EYM.Forms
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.signIn);
+            this.panel3.Controls.Add(this.windowsUIButtonPanel1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtPassword);
@@ -93,16 +96,6 @@ namespace EYM.Forms
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(538, 243);
             this.panel3.TabIndex = 1;
-            // 
-            // signIn
-            // 
-            this.signIn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.signIn.Location = new System.Drawing.Point(196, 149);
-            this.signIn.Name = "signIn";
-            this.signIn.Size = new System.Drawing.Size(188, 29);
-            this.signIn.TabIndex = 11;
-            this.signIn.Text = "GİRİŞ";
-            this.signIn.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // label2
             // 
@@ -155,9 +148,27 @@ namespace EYM.Forms
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(538, 548);
             this.fluentDesignFormContainer1.TabIndex = 1;
             // 
+            // windowsUIButtonPanel1
+            // 
+            this.windowsUIButtonPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.windowsUIButtonPanel1.ButtonInterval = 20;
+            windowsUIButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions1.SvgImage")));
+            windowsUIButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("windowsUIButtonImageOptions2.SvgImage")));
+            this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("GİRİŞ YAP", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("ÇIK", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            this.windowsUIButtonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.windowsUIButtonPanel1.ForeColor = System.Drawing.Color.Black;
+            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 143);
+            this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
+            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(538, 100);
+            this.windowsUIButtonPanel1.TabIndex = 11;
+            this.windowsUIButtonPanel1.Text = "windowsUIButtonPanel1";
+            this.windowsUIButtonPanel1.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel1_ButtonClick);
+            this.windowsUIButtonPanel1.Click += new System.EventHandler(this.windowsUIButtonPanel1_Click);
+            // 
             // LoginPage
             // 
-            this.AcceptButton = this.signIn;
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -189,11 +200,11 @@ namespace EYM.Forms
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private DevExpress.XtraEditors.SimpleButton signIn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
     }
 }

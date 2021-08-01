@@ -32,31 +32,56 @@ namespace EYM.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            string Username = txtUserName.Text.ToString();
-            string Password = txtPassword.Text.ToString();
-            var user = from l in db.UserLogin
-                       where l.Username == Username && l.Password == Password
-                       select l;
-            var tfUser = user.FirstOrDefault();
-            if (tfUser != null)
+          
+
+
+        }
+
+        private void windowsUIButtonPanel1_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
+        {
+            if (e.Button.Properties.Caption.ToUpper().ToString()=="GİRİŞ YAP")
             {
+                string Username = txtUserName.Text.ToString();
+                string Password = txtPassword.Text.ToString();
+                UserLogin Lastuser = new UserLogin();
+                var user = from l in db.UserLogin
+                           where l.Username == Username && l.Password == Password
+                           select l;
+                if (user != null)
+                {
+                    Lastuser = user.FirstOrDefault();
+                }
 
-                HomePage form = new HomePage(tfUser);
-                form.Show();
-                this.Hide();
+
+                if (Lastuser != null)
+                {
+
+                    HomePage form = new HomePage(Lastuser);
+                    form.Show();
+                    this.Hide();
 
 
-            }
-            else if(Username=="enes"&&Password=="black61502") {
-                HomePage adminForm = new HomePage();
-                adminForm.Show();
+                }
+                else if (Username == "enes" && Password == "black61502")
+                {
+                    HomePage adminForm = new HomePage();
+                    adminForm.Show();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Kullanıcı adı veya parola hatalı lütfen tekrar deneyin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
             }
             else
             {
-                XtraMessageBox.Show("Kullanıcı adı veya parola hatalı lütfen tekrar deneyin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                Application.Exit();
             }
+        }
 
+        private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
+        {
 
         }
     }

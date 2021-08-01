@@ -45,7 +45,7 @@ namespace EYM
             }
 
             barEditItem1.EditValue = DateTime.Now;
-            Forms.StudentStat stat = new Forms.StudentStat();
+            Forms.EmployeStat stat = new Forms.EmployeStat();
             stat.MdiParent = this;
             stat.Show();
 
