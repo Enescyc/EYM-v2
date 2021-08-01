@@ -279,7 +279,6 @@ C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\de\DevExpress.Web.Resources.v20.1.
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\es\DevExpress.Web.Resources.v20.1.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ja\DevExpress.Web.Resources.v20.1.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ru\DevExpress.Web.Resources.v20.1.resources.dll
-C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Dashboards.EmployeeDashBoard.resources
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.EmployeStat.resources
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.StudentStat.resources
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\DevExpress.RichEdit.v20.1.Export.dll
@@ -291,3 +290,8 @@ C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\es\DevExpress.XtraReports.v20.1.Ex
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ja\DevExpress.XtraReports.v20.1.Extensions.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\bin\Debug\ru\DevExpress.XtraReports.v20.1.Extensions.resources.dll
 C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Reports.XtraReport1.resources
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Dashboards.StudentReport.resources
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.StudentReport.resources
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.EmployeeReport.resources
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Dashboards.EmployeReport.resources
+C:\Users\enesc\source\repos\EYM\EYM\obj\Debug\EYM.Forms.Dashboards.EmployeeDashboard.resources

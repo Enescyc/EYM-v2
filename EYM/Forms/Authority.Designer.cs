@@ -30,10 +30,18 @@ namespace EYM.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authority));
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.gridLogin = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.gridEmploye = new DevExpress.XtraGrid.GridControl();
+            this.gridViewEmp = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
@@ -50,17 +58,20 @@ namespace EYM.Forms
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.txtUsername = new DevExpress.XtraEditors.TextEdit();
             this.txtAuth = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.gridEmploye = new DevExpress.XtraGrid.GridControl();
-            this.gridViewEmp = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.gridLogin = new DevExpress.XtraGrid.GridControl();
-            this.cardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
+            this.tablePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEmploye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -72,16 +83,6 @@ namespace EYM.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAuth.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).BeginInit();
-            this.tablePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridEmploye)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewEmp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cardView1)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -119,6 +120,84 @@ namespace EYM.Forms
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1227, 605);
             this.panelControl1.TabIndex = 0;
+            // 
+            // tablePanel2
+            // 
+            this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30.44F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 29.56F)});
+            this.tablePanel2.Controls.Add(this.groupControl3);
+            this.tablePanel2.Controls.Add(this.groupControl2);
+            this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tablePanel2.Location = new System.Drawing.Point(468, 2);
+            this.tablePanel2.Name = "tablePanel2";
+            this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
+            this.tablePanel2.Size = new System.Drawing.Size(757, 601);
+            this.tablePanel2.TabIndex = 1;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl3.CaptionImageOptions.Image")));
+            this.tablePanel2.SetColumn(this.groupControl3, 1);
+            this.groupControl3.Controls.Add(this.gridLogin);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl3.Location = new System.Drawing.Point(387, 3);
+            this.groupControl3.Name = "groupControl3";
+            this.tablePanel2.SetRow(this.groupControl3, 0);
+            this.groupControl3.Size = new System.Drawing.Size(367, 595);
+            this.groupControl3.TabIndex = 11;
+            this.groupControl3.Text = "KULLANICI ADI VE ŞİFRELER";
+            // 
+            // gridLogin
+            // 
+            this.gridLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridLogin.Location = new System.Drawing.Point(2, 37);
+            this.gridLogin.MainView = this.gridView1;
+            this.gridLogin.Name = "gridLogin";
+            this.gridLogin.Size = new System.Drawing.Size(363, 556);
+            this.gridLogin.TabIndex = 1;
+            this.gridLogin.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridLogin;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick_1);
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Appearance.BackColor = System.Drawing.Color.White;
+            this.groupControl2.Appearance.Options.UseBackColor = true;
+            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.groupControl2.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImageOptions.Image")));
+            this.tablePanel2.SetColumn(this.groupControl2, 0);
+            this.groupControl2.Controls.Add(this.gridEmploye);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(3, 3);
+            this.groupControl2.Name = "groupControl2";
+            this.tablePanel2.SetRow(this.groupControl2, 0);
+            this.groupControl2.Size = new System.Drawing.Size(378, 595);
+            this.groupControl2.TabIndex = 10;
+            this.groupControl2.Text = "PERSONEL BİLGİLERİ";
+            // 
+            // gridEmploye
+            // 
+            this.gridEmploye.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridEmploye.Location = new System.Drawing.Point(2, 37);
+            this.gridEmploye.MainView = this.gridViewEmp;
+            this.gridEmploye.Name = "gridEmploye";
+            this.gridEmploye.Size = new System.Drawing.Size(374, 556);
+            this.gridEmploye.TabIndex = 1;
+            this.gridEmploye.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewEmp});
+            // 
+            // gridViewEmp
+            // 
+            this.gridViewEmp.GridControl = this.gridEmploye;
+            this.gridViewEmp.Name = "gridViewEmp";
+            this.gridViewEmp.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // panelControl2
             // 
@@ -192,6 +271,7 @@ namespace EYM.Forms
             this.UpdatePassword.Size = new System.Drawing.Size(316, 34);
             this.UpdatePassword.TabIndex = 13;
             this.UpdatePassword.Text = "KULLANICI ADI VE ŞİFRE KAYDINI GÜNCELLE";
+            this.UpdatePassword.Click += new System.EventHandler(this.UpdatePassword_Click);
             // 
             // deletePassword
             // 
@@ -204,6 +284,7 @@ namespace EYM.Forms
             this.deletePassword.Size = new System.Drawing.Size(316, 29);
             this.deletePassword.TabIndex = 12;
             this.deletePassword.Text = "KULLANICI ADI VE ŞİFRE KAYDINI SİL";
+            this.deletePassword.Click += new System.EventHandler(this.deletePassword_Click);
             // 
             // createPassword
             // 
@@ -322,77 +403,6 @@ namespace EYM.Forms
             this.txtAuth.Size = new System.Drawing.Size(316, 24);
             this.txtAuth.TabIndex = 10;
             // 
-            // tablePanel2
-            // 
-            this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30.44F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 29.56F)});
-            this.tablePanel2.Controls.Add(this.groupControl3);
-            this.tablePanel2.Controls.Add(this.groupControl2);
-            this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tablePanel2.Location = new System.Drawing.Point(468, 2);
-            this.tablePanel2.Name = "tablePanel2";
-            this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
-            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel2.Size = new System.Drawing.Size(757, 601);
-            this.tablePanel2.TabIndex = 1;
-            // 
-            // groupControl2
-            // 
-            this.tablePanel2.SetColumn(this.groupControl2, 0);
-            this.groupControl2.Controls.Add(this.gridEmploye);
-            this.groupControl2.Location = new System.Drawing.Point(3, 3);
-            this.groupControl2.Name = "groupControl2";
-            this.tablePanel2.SetRow(this.groupControl2, 0);
-            this.groupControl2.Size = new System.Drawing.Size(378, 595);
-            this.groupControl2.TabIndex = 10;
-            this.groupControl2.Text = "PERSONEL BİLGİLERİ";
-            // 
-            // gridEmploye
-            // 
-            this.gridEmploye.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridEmploye.Location = new System.Drawing.Point(2, 26);
-            this.gridEmploye.MainView = this.gridViewEmp;
-            this.gridEmploye.Name = "gridEmploye";
-            this.gridEmploye.Size = new System.Drawing.Size(374, 567);
-            this.gridEmploye.TabIndex = 1;
-            this.gridEmploye.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewEmp});
-            // 
-            // gridViewEmp
-            // 
-            this.gridViewEmp.GridControl = this.gridEmploye;
-            this.gridViewEmp.Name = "gridViewEmp";
-            this.gridViewEmp.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
-            // 
-            // groupControl3
-            // 
-            this.tablePanel2.SetColumn(this.groupControl3, 1);
-            this.groupControl3.Controls.Add(this.gridLogin);
-            this.groupControl3.Location = new System.Drawing.Point(387, 15);
-            this.groupControl3.Name = "groupControl3";
-            this.tablePanel2.SetRow(this.groupControl3, 0);
-            this.groupControl3.Size = new System.Drawing.Size(367, 570);
-            this.groupControl3.TabIndex = 11;
-            this.groupControl3.Text = "KULLANICI ADI VE ŞİFRELER";
-            // 
-            // gridLogin
-            // 
-            this.gridLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridLogin.Location = new System.Drawing.Point(2, 26);
-            this.gridLogin.MainView = this.cardView1;
-            this.gridLogin.Name = "gridLogin";
-            this.gridLogin.Size = new System.Drawing.Size(363, 542);
-            this.gridLogin.TabIndex = 1;
-            this.gridLogin.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.cardView1});
-            // 
-            // cardView1
-            // 
-            this.cardView1.GridControl = this.gridLogin;
-            this.cardView1.Name = "cardView1";
-            this.cardView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Auto;
-            // 
             // Authority
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -406,6 +416,16 @@ namespace EYM.Forms
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
+            this.tablePanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridEmploye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewEmp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -418,16 +438,6 @@ namespace EYM.Forms
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAuth.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePanel2)).EndInit();
-            this.tablePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridEmploye)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewEmp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cardView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,6 +470,6 @@ namespace EYM.Forms
         private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.TextEdit txtUsername;
         private DevExpress.XtraEditors.ComboBoxEdit txtAuth;
-        private DevExpress.XtraGrid.Views.Card.CardView cardView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

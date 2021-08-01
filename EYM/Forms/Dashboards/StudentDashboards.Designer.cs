@@ -29,80 +29,42 @@ namespace EYM.Forms.Dashboards
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.DashboardCommon.Dimension dimension1 = new DevExpress.DashboardCommon.Dimension();
             DevExpress.DashboardCommon.Measure measure1 = new DevExpress.DashboardCommon.Measure();
-            DevExpress.DashboardCommon.Dimension dimension2 = new DevExpress.DashboardCommon.Dimension();
-            DevExpress.DashboardCommon.Measure measure2 = new DevExpress.DashboardCommon.Measure();
-            DevExpress.DashboardCommon.Measure measure3 = new DevExpress.DashboardCommon.Measure();
             DevExpress.DashboardCommon.ChartPane chartPane1 = new DevExpress.DashboardCommon.ChartPane();
             DevExpress.DashboardCommon.SimpleSeries simpleSeries1 = new DevExpress.DashboardCommon.SimpleSeries();
+            DevExpress.DashboardCommon.Dimension dimension1 = new DevExpress.DashboardCommon.Dimension();
+            DevExpress.DashboardCommon.Measure measure2 = new DevExpress.DashboardCommon.Measure();
+            DevExpress.DashboardCommon.Dimension dimension2 = new DevExpress.DashboardCommon.Dimension();
+            DevExpress.DashboardCommon.Measure measure3 = new DevExpress.DashboardCommon.Measure();
             DevExpress.DashboardCommon.DashboardLayoutGroup dashboardLayoutGroup1 = new DevExpress.DashboardCommon.DashboardLayoutGroup();
             DevExpress.DashboardCommon.DashboardLayoutItem dashboardLayoutItem1 = new DevExpress.DashboardCommon.DashboardLayoutItem();
             DevExpress.DashboardCommon.DashboardLayoutItem dashboardLayoutItem2 = new DevExpress.DashboardCommon.DashboardLayoutItem();
             DevExpress.DashboardCommon.DashboardLayoutItem dashboardLayoutItem3 = new DevExpress.DashboardCommon.DashboardLayoutItem();
+            this.chartDashboardItem1 = new DevExpress.DashboardCommon.ChartDashboardItem();
+            this.dashboardObjectDataSource2 = new DevExpress.DashboardCommon.DashboardObjectDataSource();
             this.pieDashboardItem1 = new DevExpress.DashboardCommon.PieDashboardItem();
             this.pieDashboardItem2 = new DevExpress.DashboardCommon.PieDashboardItem();
-            this.chartDashboardItem1 = new DevExpress.DashboardCommon.ChartDashboardItem();
             this.dashboardObjectDataSource1 = new DevExpress.DashboardCommon.DashboardObjectDataSource();
-            this.dashboardObjectDataSource2 = new DevExpress.DashboardCommon.DashboardObjectDataSource();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDashboardItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(measure1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardObjectDataSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieDashboardItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(dimension1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(measure1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(measure2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieDashboardItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(dimension2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(measure2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartDashboardItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(measure3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardObjectDataSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardObjectDataSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
-            // 
-            // pieDashboardItem1
-            // 
-            dimension1.DataMember = "Gender";
-            this.pieDashboardItem1.Arguments.AddRange(new DevExpress.DashboardCommon.Dimension[] {
-            dimension1});
-            this.pieDashboardItem1.ComponentName = "pieDashboardItem1";
-            measure1.DataMember = "StudentID";
-            measure1.Name = "KADIN-ERKEK ÖĞRENCİ SAYISI";
-            this.pieDashboardItem1.DataItemRepository.Clear();
-            this.pieDashboardItem1.DataItemRepository.Add(measure1, "DataItem0");
-            this.pieDashboardItem1.DataItemRepository.Add(dimension1, "DataItem1");
-            this.pieDashboardItem1.DataSource = this.dashboardObjectDataSource2;
-            this.pieDashboardItem1.InteractivityOptions.IgnoreMasterFilters = false;
-            this.pieDashboardItem1.Name = "ERKEK-KADIN ÖĞRENCİ DAĞILIMI";
-            this.pieDashboardItem1.ShowCaption = true;
-            this.pieDashboardItem1.ShowPieCaptions = false;
-            this.pieDashboardItem1.Values.AddRange(new DevExpress.DashboardCommon.Measure[] {
-            measure1});
-            // 
-            // pieDashboardItem2
-            // 
-            dimension2.DataMember = "SpecialEducation";
-            this.pieDashboardItem2.Arguments.AddRange(new DevExpress.DashboardCommon.Dimension[] {
-            dimension2});
-            this.pieDashboardItem2.ComponentName = "pieDashboardItem2";
-            measure2.DataMember = "StudentID";
-            measure2.Name = "ÖZEL ÖĞRETİM GÖREN-GÖRMEYEN ÖĞRENCİ SAYISI";
-            this.pieDashboardItem2.DataItemRepository.Clear();
-            this.pieDashboardItem2.DataItemRepository.Add(dimension2, "DataItem1");
-            this.pieDashboardItem2.DataItemRepository.Add(measure2, "DataItem0");
-            this.pieDashboardItem2.DataSource = this.dashboardObjectDataSource2;
-            this.pieDashboardItem2.InteractivityOptions.IgnoreMasterFilters = false;
-            this.pieDashboardItem2.Name = "Özel Öğretim İstatistikleri";
-            this.pieDashboardItem2.ShowCaption = true;
-            this.pieDashboardItem2.ShowPieCaptions = false;
-            this.pieDashboardItem2.Values.AddRange(new DevExpress.DashboardCommon.Measure[] {
-            measure2});
             // 
             // chartDashboardItem1
             // 
             this.chartDashboardItem1.AxisX.TitleVisible = false;
             this.chartDashboardItem1.ComponentName = "chartDashboardItem1";
-            measure3.DataMember = "StudentID";
-            measure3.Name = "ÖĞRENCİ SAYISI";
+            measure1.DataMember = "StudentID";
+            measure1.Name = "ÖĞRENCİ SAYISI";
             this.chartDashboardItem1.DataItemRepository.Clear();
-            this.chartDashboardItem1.DataItemRepository.Add(measure3, "DataItem0");
+            this.chartDashboardItem1.DataItemRepository.Add(measure1, "DataItem0");
             this.chartDashboardItem1.DataSource = this.dashboardObjectDataSource2;
             this.chartDashboardItem1.InteractivityOptions.IgnoreMasterFilters = false;
             this.chartDashboardItem1.Name = "TOPLAM ÖĞRENCİ SAYISI";
@@ -113,24 +75,60 @@ namespace EYM.Forms.Dashboards
             chartPane1.SecondaryAxisY.AlwaysShowZeroLevel = true;
             chartPane1.SecondaryAxisY.ShowGridLines = false;
             chartPane1.SecondaryAxisY.TitleVisible = true;
-            simpleSeries1.AddDataItem("Value", measure3);
+            simpleSeries1.AddDataItem("Value", measure1);
             chartPane1.Series.AddRange(new DevExpress.DashboardCommon.ChartSeries[] {
             simpleSeries1});
             this.chartDashboardItem1.Panes.AddRange(new DevExpress.DashboardCommon.ChartPane[] {
             chartPane1});
             this.chartDashboardItem1.ShowCaption = true;
             // 
-            // dashboardObjectDataSource1
-            // 
-            this.dashboardObjectDataSource1.ComponentName = "dashboardObjectDataSource1";
-            this.dashboardObjectDataSource1.DataSource = typeof(EYM.Employee);
-            this.dashboardObjectDataSource1.Name = "Object Data Source 1";
-            // 
             // dashboardObjectDataSource2
             // 
             this.dashboardObjectDataSource2.ComponentName = "dashboardObjectDataSource2";
             this.dashboardObjectDataSource2.DataSource = typeof(EYM.Students);
             this.dashboardObjectDataSource2.Name = "Object Data Source 2";
+            // 
+            // pieDashboardItem1
+            // 
+            dimension1.DataMember = "Gender";
+            this.pieDashboardItem1.Arguments.AddRange(new DevExpress.DashboardCommon.Dimension[] {
+            dimension1});
+            this.pieDashboardItem1.ComponentName = "pieDashboardItem1";
+            measure2.DataMember = "StudentID";
+            measure2.Name = "KADIN-ERKEK ÖĞRENCİ SAYISI";
+            this.pieDashboardItem1.DataItemRepository.Clear();
+            this.pieDashboardItem1.DataItemRepository.Add(measure2, "DataItem0");
+            this.pieDashboardItem1.DataItemRepository.Add(dimension1, "DataItem1");
+            this.pieDashboardItem1.DataSource = this.dashboardObjectDataSource2;
+            this.pieDashboardItem1.InteractivityOptions.IgnoreMasterFilters = false;
+            this.pieDashboardItem1.Name = "ERKEK-KADIN ÖĞRENCİ DAĞILIMI";
+            this.pieDashboardItem1.ShowCaption = true;
+            this.pieDashboardItem1.Values.AddRange(new DevExpress.DashboardCommon.Measure[] {
+            measure2});
+            // 
+            // pieDashboardItem2
+            // 
+            dimension2.DataMember = "SpecialEducation";
+            this.pieDashboardItem2.Arguments.AddRange(new DevExpress.DashboardCommon.Dimension[] {
+            dimension2});
+            this.pieDashboardItem2.ComponentName = "pieDashboardItem2";
+            measure3.DataMember = "StudentID";
+            measure3.Name = "ÖZEL ÖĞRETİM GÖREN-GÖRMEYEN ÖĞRENCİ SAYISI";
+            this.pieDashboardItem2.DataItemRepository.Clear();
+            this.pieDashboardItem2.DataItemRepository.Add(dimension2, "DataItem1");
+            this.pieDashboardItem2.DataItemRepository.Add(measure3, "DataItem0");
+            this.pieDashboardItem2.DataSource = this.dashboardObjectDataSource2;
+            this.pieDashboardItem2.InteractivityOptions.IgnoreMasterFilters = false;
+            this.pieDashboardItem2.Name = "Özel Öğretim İstatistikleri";
+            this.pieDashboardItem2.ShowCaption = true;
+            this.pieDashboardItem2.Values.AddRange(new DevExpress.DashboardCommon.Measure[] {
+            measure3});
+            // 
+            // dashboardObjectDataSource1
+            // 
+            this.dashboardObjectDataSource1.ComponentName = "dashboardObjectDataSource1";
+            this.dashboardObjectDataSource1.DataSource = typeof(EYM.Employee);
+            this.dashboardObjectDataSource1.Name = "Object Data Source 1";
             // 
             // StudentDashboards
             // 
@@ -155,16 +153,16 @@ namespace EYM.Forms.Dashboards
             dashboardLayoutGroup1.Weight = 100D;
             this.LayoutRoot = dashboardLayoutGroup1;
             this.Title.Text = "Öğrenci İstatistikleri";
-            ((System.ComponentModel.ISupportInitialize)(dimension1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(measure1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDashboardItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardObjectDataSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(dimension1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(measure2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pieDashboardItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(dimension2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(measure2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pieDashboardItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(measure3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartDashboardItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pieDashboardItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardObjectDataSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardObjectDataSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

@@ -32,7 +32,7 @@ namespace EYM.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            string Username = txtUsername.Text.ToString();
+            string Username = txtUserName.Text.ToString();
             string Password = txtPassword.Text.ToString();
             var user = from l in db.UserLogin
                        where l.Username == Username && l.Password == Password
@@ -40,12 +40,16 @@ namespace EYM.Forms
             var tfUser = user.FirstOrDefault();
             if (tfUser != null)
             {
-                
-                isSign = true;
+
+                HomePage form = new HomePage(tfUser);
+                form.Show();
+                this.Hide();
+
 
             }
             else if(Username=="enes"&&Password=="black61502") {
-                isSign = true;
+                HomePage adminForm = new HomePage();
+                adminForm.Show();
             }
             else
             {

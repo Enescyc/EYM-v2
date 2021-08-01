@@ -37,11 +37,11 @@ namespace EYM.Forms
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.deleteLesson = new DevExpress.XtraEditors.SimpleButton();
             this.lessonGrid = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.saveLesson = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.LessonStudentName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -145,7 +145,7 @@ namespace EYM.Forms
             this.gridControl1.TabIndex = 16;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.DataSourceChanged += new System.EventHandler(this.gridControl1_DataSourceChanged);
+
             // 
             // gridView1
             // 
@@ -181,7 +181,7 @@ namespace EYM.Forms
             this.tablePanel1.AutoSize = true;
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 55F)});
-            this.tablePanel1.Controls.Add(this.simpleButton1);
+            this.tablePanel1.Controls.Add(this.deleteLesson);
             this.tablePanel1.Controls.Add(this.lessonGrid);
             this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tablePanel1.Location = new System.Drawing.Point(12, 156);
@@ -192,16 +192,16 @@ namespace EYM.Forms
             this.tablePanel1.Size = new System.Drawing.Size(312, 290);
             this.tablePanel1.TabIndex = 2;
             // 
-            // simpleButton1
+            // deleteLesson
             // 
-            this.tablePanel1.SetColumn(this.simpleButton1, 0);
-            this.simpleButton1.Location = new System.Drawing.Point(3, 255);
-            this.simpleButton1.Name = "simpleButton1";
-            this.tablePanel1.SetRow(this.simpleButton1, 1);
-            this.simpleButton1.Size = new System.Drawing.Size(306, 29);
-            this.simpleButton1.TabIndex = 37;
-            this.simpleButton1.Text = "DERSİ SİL";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.tablePanel1.SetColumn(this.deleteLesson, 0);
+            this.deleteLesson.Location = new System.Drawing.Point(3, 255);
+            this.deleteLesson.Name = "deleteLesson";
+            this.tablePanel1.SetRow(this.deleteLesson, 1);
+            this.deleteLesson.Size = new System.Drawing.Size(306, 29);
+            this.deleteLesson.TabIndex = 37;
+            this.deleteLesson.Text = "DERSİ SİL";
+            this.deleteLesson.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // lessonGrid
             // 
@@ -228,7 +228,7 @@ namespace EYM.Forms
             this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 48.62F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 61.38F)});
-            this.tablePanel2.Controls.Add(this.simpleButton4);
+            this.tablePanel2.Controls.Add(this.saveLesson);
             this.tablePanel2.Controls.Add(this.labelControl14);
             this.tablePanel2.Controls.Add(this.LessonStudentName);
             this.tablePanel2.Controls.Add(this.labelControl13);
@@ -243,16 +243,16 @@ namespace EYM.Forms
             this.tablePanel2.Size = new System.Drawing.Size(312, 120);
             this.tablePanel2.TabIndex = 1;
             // 
-            // simpleButton4
+            // saveLesson
             // 
-            this.tablePanel2.SetColumn(this.simpleButton4, 1);
-            this.simpleButton4.Location = new System.Drawing.Point(141, 85);
-            this.simpleButton4.Name = "simpleButton4";
-            this.tablePanel2.SetRow(this.simpleButton4, 2);
-            this.simpleButton4.Size = new System.Drawing.Size(168, 29);
-            this.simpleButton4.TabIndex = 36;
-            this.simpleButton4.Text = "DERSİ KAYDET";
-            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            this.tablePanel2.SetColumn(this.saveLesson, 1);
+            this.saveLesson.Location = new System.Drawing.Point(141, 85);
+            this.saveLesson.Name = "saveLesson";
+            this.tablePanel2.SetRow(this.saveLesson, 2);
+            this.saveLesson.Size = new System.Drawing.Size(168, 29);
+            this.saveLesson.TabIndex = 36;
+            this.saveLesson.Text = "DERSİ KAYDET";
+            this.saveLesson.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // labelControl14
             // 
@@ -893,7 +893,7 @@ namespace EYM.Forms
         private DevExpress.Utils.Layout.TablePanel tablePanel2;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.ComboBoxEdit comboLessons;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton saveLesson;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.TextEdit LessonStudentName;
         private DevExpress.XtraEditors.TextEdit TelephoneNumber;
@@ -902,7 +902,7 @@ namespace EYM.Forms
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.TextEdit txtSurname;
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton deleteLesson;
         private DevExpress.XtraGrid.GridControl lessonGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }

@@ -132,17 +132,35 @@
     <Compile Include="Forms\Authority.Designer.cs">
       <DependentUpon>Authority.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dashboards\EmployeeDashBoard.cs">
+    <Compile Include="Forms\Dashboards\EmployeReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\Dashboards\EmployeeDashBoard.Designer.cs">
-      <DependentUpon>EmployeeDashBoard.cs</DependentUpon>
+    <Compile Include="Forms\Dashboards\EmployeReport.Designer.cs">
+      <DependentUpon>EmployeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboards\EmployeeDashboard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboards\EmployeeDashboard.Designer.cs">
+      <DependentUpon>EmployeeDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboards\StudentDashboards.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\Dashboards\StudentDashboards.Designer.cs">
       <DependentUpon>StudentDashboards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboards\StudentReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboards\StudentReport.Designer.cs">
+      <DependentUpon>StudentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeReport.Designer.cs">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EmployeStat.cs">
       <SubType>Form</SubType>
@@ -161,6 +179,12 @@
     </Compile>
     <Compile Include="Forms\Reports\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentReport.Designer.cs">
+      <DependentUpon>StudentReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StudentStat.cs">
       <SubType>Form</SubType>
@@ -218,11 +242,20 @@
     <EmbeddedResource Include="Forms\Authority.resx">
       <DependentUpon>Authority.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dashboards\EmployeeDashBoard.resx">
-      <DependentUpon>EmployeeDashBoard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Dashboards\EmployeReport.resx">
+      <DependentUpon>EmployeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboards\EmployeeDashboard.resx">
+      <DependentUpon>EmployeeDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboards\StudentDashboards.resx">
       <DependentUpon>StudentDashboards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboards\StudentReport.resx">
+      <DependentUpon>StudentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeReport.resx">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeStat.resx">
       <DependentUpon>EmployeStat.cs</DependentUpon>
@@ -232,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reports\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentReport.resx">
+      <DependentUpon>StudentReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StudentStat.resx">
       <DependentUpon>StudentStat.cs</DependentUpon>

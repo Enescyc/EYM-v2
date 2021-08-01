@@ -19,10 +19,12 @@ namespace EYM.Forms
     {
         EYMEntities2 db = new EYMEntities2();
         int deleteID = -1;
+        
 
         public EmployeePage()
         {
             InitializeComponent();
+            
         }
 
 
@@ -35,23 +37,47 @@ namespace EYM.Forms
             string[] arr = a.ToArray();
             for (int i = 0; i < arr.Length; i++)
             {
-
+                
                 txtStatus.Properties.Items.Add(arr[i].ToString());
                 CheckStatus.Properties.Items.Add(arr[i].ToString());
             }
         }
         private void changeGridViewColumnNames()
         {
-            gridView1.Columns["EmployeeID"].Caption = "Kayıt Numarası";
-            gridView1.Columns["Name"].Caption = "Çalışan Adı";
-            gridView1.Columns["Surname"].Caption = "Çalışan Soyadı";
-            gridView1.Columns["BirthDay"].Caption = "Doğum Tarihi";
-            gridView1.Columns["IdentificationNumber"].Caption = "Kimlik Numarası";
-            gridView1.Columns["BloodClass"].Caption = "Kan Grubu";
-            gridView1.Columns["TelephoneNumber"].Caption = "Telefon Numarası";
-            gridView1.Columns["Adress"].Caption = "Adres Bilgisi";
-            gridView1.Columns["Gender"].Caption = "Cinsiyeti";
-            gridView1.Columns["Status"].Caption = "Görevi";
+            if (gridView1.Columns["EmployeeID"]!=null)
+                gridView1.Columns["EmployeeID"].Caption = "Kayıt Numarası";
+            if (gridView1.Columns["Name"]!=null)
+                gridView1.Columns["Name"].Caption = "Çalışan Adı";
+            if (gridView1.Columns["Surname"] != null)
+                gridView1.Columns["Surname"].Caption = "Çalışan Soyadı";
+            if (gridView1.Columns["Birthday"]!=null)
+                gridView1.Columns["BirthDay"].Caption = "Doğum Tarihi";
+            if (gridView1.Columns["IdentificationNumber"]!=null)
+                gridView1.Columns["IdentificationNumber"].Caption = "Kimlik Numarası";
+            if (gridView1.Columns["BloodClass"]!=null)
+                gridView1.Columns["BloodClass"].Caption = "Kan Grubu";
+            if (gridView1.Columns["TelephoneNumber"] != null)
+                gridView1.Columns["TelephoneNumber"].Caption = "Telefon Numarası";
+            if (gridView1.Columns["Adress"] != null)
+                gridView1.Columns["Adress"].Caption = "Adres Bilgisi";
+            if (gridView1.Columns["Gender"] != null)
+                gridView1.Columns["Gender"].Caption = "Cinsiyeti";
+            if (gridView1.Columns["Status"] != null)
+                gridView1.Columns["Status"].Caption = "Görevi";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             gridView1.Columns["UserLogin"].Visible = false;
        
         }
@@ -64,7 +90,7 @@ namespace EYM.Forms
                 gridControl1.DataSource = db.Employee.ToList();
                 changeGridViewColumnNames();
                 loadStatus();
-             
+
 
 
 
@@ -208,21 +234,28 @@ namespace EYM.Forms
             {
               
                 
-
+                if (gridView1.GetFocusedRowCellValue("Name")!=null)
                 txtName.Text = gridView1.GetFocusedRowCellValue("Name").ToString();
-                Surname.Text = gridView1.GetFocusedRowCellValue("Surname").ToString();
+                if (gridView1.GetFocusedRowCellValue("Surname") != null)
+                    Surname.Text = gridView1.GetFocusedRowCellValue("Surname").ToString();
                 if (gridView1.GetFocusedRowCellValue("BirthDay")!=null)
                 {
                     Birthday.DateTime = System.DateTime.Parse(gridView1.GetFocusedRowCellValue("BirthDay").ToString());
                 }
-                
-                BloodClass.Text = gridView1.GetFocusedRowCellValue("BloodClass").ToString();
-                TelephoneNumber.Text = gridView1.GetFocusedRowCellValue("TelephoneNumber").ToString();
-                Adress.Text = gridView1.GetFocusedRowCellValue("Adress").ToString();
-                Gender.Text = gridView1.GetFocusedRowCellValue("Gender").ToString();
-                txtStatus.Text = gridView1.GetFocusedRowCellValue("Status").ToString();
-                deleteID = int.Parse(gridView1.GetFocusedRowCellValue("EmployeeID").ToString());
-                IdentificationNumber.Text = gridView1.GetFocusedRowCellValue("IdentificationNumber").ToString();
+                if (gridView1.GetFocusedRowCellValue("BloodClass") != null)
+                    BloodClass.Text = gridView1.GetFocusedRowCellValue("BloodClass").ToString();
+                if (gridView1.GetFocusedRowCellValue("TelephoneNumber") != null)
+                    TelephoneNumber.Text = gridView1.GetFocusedRowCellValue("TelephoneNumber").ToString();
+                if (gridView1.GetFocusedRowCellValue("Adress") != null)
+                    Adress.Text = gridView1.GetFocusedRowCellValue("Adress").ToString();
+                if (gridView1.GetFocusedRowCellValue("Gender") != null)
+                    Gender.Text = gridView1.GetFocusedRowCellValue("Gender").ToString();
+                if (gridView1.GetFocusedRowCellValue("Status") != null)
+                    txtStatus.Text = gridView1.GetFocusedRowCellValue("Status").ToString();
+                if (gridView1.GetFocusedRowCellValue("EmployeeID") != null)
+                    deleteID = int.Parse(gridView1.GetFocusedRowCellValue("EmployeeID").ToString());
+                if (gridView1.GetFocusedRowCellValue("IdentificationNumber") != null)
+                    IdentificationNumber.Text = gridView1.GetFocusedRowCellValue("IdentificationNumber").ToString();
             }
             catch (Exception err)
             {

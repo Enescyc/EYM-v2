@@ -17,7 +17,7 @@ namespace EYM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomePage());
+            Application.Run(new Forms.LoginPage());
         }
     }
 }

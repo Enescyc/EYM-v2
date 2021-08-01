@@ -15,24 +15,47 @@ namespace EYM
     public partial class HomePage : DevExpress.XtraBars.Ribbon.RibbonForm
     {
 
-
+        Employee loginUser = new Employee();
+        UserLogin log = new UserLogin();
         EYMEntities2 db = new EYMEntities2();
        
-        public HomePage()
+        public HomePage(UserLogin signIn=null)
         {
             InitializeComponent();
+            if (signIn != null) ;
+            {
+                this.log = signIn;
+                this.loginUser = db.Employee.FirstOrDefault(x => x.EmployeeID == signIn.EmployeeID);
+            }
+         
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-   
+            if (loginUser!=null)
+            {
+                txtsignIn.Caption += loginUser.Name.ToString() + " " + loginUser.Surname.ToString();
+               
+            }
+            if (log.Authority==false)
+            {
+                AuthBtn.Enabled = false;
+                RollCallBtn.Enabled = false;
+                EmployeeBtn.Enabled = false;
+            }
 
-            
+            barEditItem1.EditValue = DateTime.Now;
+            Forms.StudentStat stat = new Forms.StudentStat();
+            stat.MdiParent = this;
+            stat.Show();
+
+
+
         }
 
             private void addBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.students window = new Forms.students();
+            Forms.students window = new Forms.students(log);
             window.MdiParent = this;
             window.Show();
    
@@ -83,6 +106,38 @@ namespace EYM
         private void ribbonControl1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void HomePage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsignIn_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barEditItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.EmployeeReport report = new Forms.EmployeeReport();
+            report.Show();
+        }
+
+        private void barButtonItem11_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.StudentReport report = new Forms.StudentReport();
+            report.Show();
         }
     }
 }
